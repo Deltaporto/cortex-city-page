@@ -59,6 +59,10 @@
       '.cast-art{position:relative;display:block;width:100%;margin:-18px 0 34px;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--night-2)}\n'+
       '.cast-art img{display:block;width:100%;aspect-ratio:16/8.2;object-fit:cover;object-position:center;filter:saturate(1.04) contrast(1.02)}\n'+
       '.cast-art::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(9,12,24,.2)),radial-gradient(90% 70% at 18% 28%,rgba(124,242,200,.16),transparent 55%);pointer-events:none}\n'+
+      '.anti-control{margin-top:36px;border:1px solid var(--line);border-left:2px solid var(--impulse);border-radius:8px;padding:24px 26px;background:rgba(94,230,255,.035)}\n'+
+      '.anti-control .k{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--impulse);margin-bottom:9px}\n'+
+      '.anti-control p{font-size:15px;color:#C6C8E0;line-height:1.55;margin:0;max-width:76ch}\n'+
+      '.anti-control strong{color:var(--myelin);font-weight:600}\n'+
       '.dive-grid{display:grid;grid-template-columns:minmax(280px,.88fr) 1.12fr;gap:46px;align-items:center}\n'+
       '.dive-art{position:relative;display:block;width:100%;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--deep);box-shadow:0 28px 70px rgba(0,0,0,.32)}\n'+
       '.dive-art img{display:block;width:100%;aspect-ratio:10/15.6;object-fit:cover;object-position:center;filter:saturate(1.05) contrast(1.03)}\n'+
@@ -72,6 +76,8 @@
     if(hero&&!hero.querySelector('.hero-visual-bg')) hero.insertAdjacentHTML('afterbegin','<div class="hero-visual-bg" aria-hidden="true"><picture><source srcset="assets/images/cortex-city-hero.webp" type="image/webp"><img src="assets/images/cortex-city-hero.webp" alt="" loading="eager" decoding="async"></picture></div>');
     var castHead=document.querySelector('#elenco .section-head');
     if(castHead&&!document.querySelector('.cast-art')) castHead.insertAdjacentHTML('afterend','<picture class="cast-art"><source srcset="assets/images/cortex-city-astri-spike.webp" type="image/webp"><img src="assets/images/cortex-city-astri-spike.webp" alt="Astri e Spike em um corredor de manutenção neural de Córtex City." loading="lazy" decoding="async"></picture>');
+    var bet=document.querySelector('#aposta .bet');
+    if(bet&&!document.querySelector('.anti-control')) bet.insertAdjacentHTML('afterend','<div class="anti-control reveal in"><div class="k">Regra anti-homúnculo</div><p><strong>Não existe sala de controle.</strong> O comportamento do Léo nasce do saldo de muitos distritos funcionando em paralelo: a Amy é só mais rápida, o Prefeito Frontal é só um departamento em obras, e "Léo" é a cidade inteira com sua história.</p></div>');
     var stack=document.querySelector('#mergulho .dive-stack');
     if(stack&&!document.querySelector('.dive-grid')){
       var grid=document.createElement('div');
