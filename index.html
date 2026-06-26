@@ -51,6 +51,13 @@
   function patchHtml(html){
     var patch='\n<style id="imagePatchStyles">\n'+
       '#hero{overflow:hidden;isolation:isolate}\n'+
+      '.hero-copy{position:relative;z-index:1;text-shadow:0 2px 18px rgba(5,6,14,.72)}\n'+
+      '.hero-copy::before{content:"";position:absolute;inset:-34px -46px -38px -34px;z-index:-1;pointer-events:none;background:radial-gradient(70% 58% at 38% 38%,rgba(5,6,14,.78),rgba(5,6,14,.48) 48%,transparent 76%)}\n'+
+      '.hero-kicker{color:#BFC8FF}\n'+
+      '#hero h1 .l1{color:#F2F1FA}\n'+
+      '#hero h1 .l2{-webkit-text-stroke:1.35px #68E9FF;filter:drop-shadow(0 0 12px rgba(94,230,255,.2))}\n'+
+      '.hero-sub{color:#E3E6F8}\n'+
+      '.hero-meta{color:#B9C1E9}\n'+
       '.hero-visual-bg{position:absolute;inset:0;z-index:0;pointer-events:none}\n'+
       '.hero-visual-bg picture,.hero-visual-bg img{display:block;width:100%;height:100%}\n'+
       '.hero-visual-bg img{object-fit:cover;object-position:64% 50%;opacity:.48;filter:saturate(1.08) contrast(1.04)}\n'+
