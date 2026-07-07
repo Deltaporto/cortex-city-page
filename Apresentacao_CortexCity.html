@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Córtex City - Dossiê completo da série</title>
+<meta name="description" content="Dossiê completo de Córtex City: premissa, temporada, personagens, mundo, ciência, materiais de pitch, estratégia de IP e concept art.">
+<style>
+  :root{
+    --night:#070A14;
+    --navy:#0D1328;
+    --ink:#F7FAFF;
+    --muted:#CAD4E8;
+    --dim:#9AA7C4;
+    --line:rgba(247,250,255,.18);
+    --cyan:#5EE6FF;
+    --mint:#7CF2C8;
+    --copper:#E8845D;
+    --rose:#FF7BA6;
+    --red:#FF6B57;
+    --green:#B7F05A;
+    --paper:#EAF1F4;
+    --paper-ink:#152131;
+    --paper-soft:#40546A;
+    --paper-line:rgba(21,33,49,.18);
+    --max:1180px;
+    --radius:28px;
+    --shadow:0 22px 70px rgba(0,0,0,.35);
+    --serif:Georgia,"Times New Roman",serif;
+    --sans:Avenir Next,Segoe UI,system-ui,-apple-system,sans-serif;
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:
+      radial-gradient(900px 520px at 85% -10%,rgba(94,230,255,.18),transparent 60%),
+      radial-gradient(700px 420px at 10% 12%,rgba(232,132,93,.12),transparent 65%),
+      var(--night);
+    color:var(--ink);
+    font-family:var(--sans);
+    line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--cyan);text-decoration:none}
+  a:hover{text-decoration:underline}
+  img{display:block;max-width:100%;height:auto}
+  strong{color:#fff}
+  .paper strong{color:var(--paper-ink)}
+  .wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto}
+  .nav{
+    position:sticky;top:0;z-index:30;
+    background:rgba(7,10,20,.76);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0}
+  .brand{font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:.82rem}
+  .brand span{color:var(--cyan)}
+  .navlinks{display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end}
+  .navlinks a{font-size:.78rem;color:var(--muted);font-family:var(--mono);text-transform:uppercase;letter-spacing:.08em}
+  .hero{
+    min-height:92vh;
+    display:grid;
+    align-items:end;
+    position:relative;
+    overflow:hidden;
+    border-bottom:1px solid var(--line);
+  }
+  .hero::before{
+    content:"";
+    position:absolute;inset:0;
+    background:
+      linear-gradient(90deg,rgba(7,10,20,.96) 0%,rgba(7,10,20,.68) 38%,rgba(7,10,20,.22) 72%,rgba(7,10,20,.76) 100%),
+      url("output/generated/keyart/HERO_styleB_cortex_reveal.png") center/cover no-repeat;
+    filter:saturate(1.05) contrast(1.04);
+  }
+  .hero::after{
+    content:"";
+    position:absolute;inset:auto 0 0 0;height:38%;
+    background:linear-gradient(0deg,var(--night),transparent);
+  }
+  .hero .wrap{position:relative;z-index:2;padding:88px 0 72px}
+  .eyebrow{
+    font-family:var(--mono);
+    text-transform:uppercase;
+    letter-spacing:.18em;
+    color:var(--cyan);
+    font-size:.78rem;
+    margin:0 0 20px;
+  }
+  h1{
+    max-width:900px;
+    font-size:clamp(3.4rem,10vw,9rem);
+    line-height:.88;
+    letter-spacing:-.07em;
+    margin:0;
+    text-transform:uppercase;
+  }
+  h1 .city{color:var(--cyan);text-shadow:0 0 34px rgba(94,230,255,.5)}
+  .subtitle{
+    max-width:760px;
+    margin:28px 0 0;
+    color:var(--ink);
+    font-size:clamp(1.1rem,2.2vw,1.45rem);
+  }
+  .hero-meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+  .pill{
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:8px 12px;
+    color:var(--muted);
+    background:rgba(255,255,255,.04);
+    font-family:var(--mono);
+    font-size:.78rem;
+  }
+  section{padding:88px 0;border-bottom:1px solid var(--line)}
+  .paper{
+    background:
+      radial-gradient(780px 420px at 88% 0%,rgba(94,230,255,.12),transparent 62%),
+      linear-gradient(180deg,rgba(255,255,255,.62),rgba(255,255,255,.24)),
+      var(--paper);
+    color:var(--paper-ink);
+  }
+  .paper .eyebrow{color:#0D6E83}
+  .paper a{color:#075C70}
+  h2{
+    font-size:clamp(2rem,5vw,4.4rem);
+    line-height:.98;
+    letter-spacing:-.055em;
+    margin:0 0 26px;
+  }
+  h3{font-size:1.2rem;line-height:1.15;margin:0 0 10px}
+  p{margin:0 0 1rem}
+  .lede{font-size:clamp(1.05rem,1.8vw,1.28rem);color:var(--muted);max-width:760px}
+  .paper .lede{color:var(--paper-soft)}
+  .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:22px}
+  .card{
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:24px;
+    background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.025));
+    box-shadow:var(--shadow);
+  }
+  .paper .card{
+    background:rgba(255,255,255,.66);
+    border-color:var(--paper-line);
+    box-shadow:0 18px 48px rgba(21,33,49,.12);
+  }
+  .span-3{grid-column:span 3}
+  .span-4{grid-column:span 4}
+  .span-5{grid-column:span 5}
+  .span-6{grid-column:span 6}
+  .span-7{grid-column:span 7}
+  .span-8{grid-column:span 8}
+  .span-12{grid-column:span 12}
+  .quote{
+    font-family:var(--serif);
+    font-size:clamp(1.6rem,3.4vw,3rem);
+    line-height:1.08;
+    max-width:920px;
+    margin:28px 0;
+  }
+  .caption{font-family:var(--mono);font-size:.78rem;color:var(--dim);text-transform:uppercase;letter-spacing:.08em;margin-top:10px}
+  .paper .caption{color:var(--paper-soft)}
+  .img-card{overflow:hidden;padding:0}
+  .img-card img{width:100%;height:100%;object-fit:cover;min-height:260px}
+  .img-card .cap{padding:14px 16px;border-top:1px solid var(--line);font-size:.86rem;color:var(--muted)}
+  .paper .img-card .cap{border-color:var(--paper-line);color:var(--paper-soft)}
+  .list{display:grid;gap:14px;margin-top:26px}
+  .item{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start}
+  .num{
+    width:34px;height:34px;border-radius:50%;
+    display:grid;place-items:center;
+    background:var(--cyan);color:#031018;
+    font-family:var(--mono);font-size:.8rem;font-weight:800;
+  }
+  .paper .num{background:#0D6E83;color:#fff}
+  .timeline{display:grid;gap:12px;margin-top:28px}
+  .ep{
+    display:grid;
+    grid-template-columns:74px 1.15fr 1.85fr;
+    gap:18px;
+    padding:18px;
+    border:1px solid var(--line);
+    border-radius:20px;
+    background:rgba(255,255,255,.04);
+  }
+  .ep .n{font-family:var(--mono);color:var(--cyan);font-weight:800}
+  .ep .tema{font-family:var(--mono);font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+  .ep p{color:var(--muted);margin:0}
+  .paper .ep{border-color:var(--paper-line);background:rgba(255,255,255,.62)}
+  .paper .ep .n{color:#0D6E83}
+  .paper .ep .tema{color:#53647A}
+  .paper .ep p{color:var(--paper-soft)}
+  .characters{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:32px}
+  .char{
+    border:1px solid var(--line);
+    border-radius:24px;
+    overflow:hidden;
+    background:rgba(255,255,255,.04);
+  }
+  .char img{width:100%;aspect-ratio:4/5;object-fit:cover}
+  .char div{padding:16px}
+  .char p{color:var(--muted);font-size:.94rem;margin:0}
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:32px}
+  .gallery figure{margin:0;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:#0B1024}
+  .gallery img{width:100%;aspect-ratio:16/9;object-fit:cover}
+  .gallery figcaption{padding:12px 14px;color:var(--muted);font-size:.9rem}
+  .docs{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:28px}
+  .doc{
+    display:block;
+    padding:18px;
+    border:1px solid var(--line);
+    border-radius:18px;
+    background:rgba(255,255,255,.035);
+  }
+  .doc b{display:block;color:#fff;margin-bottom:5px}
+  .doc span{display:block;color:var(--muted);font-size:.92rem}
+  .paper .doc{background:rgba(255,255,255,.72);border-color:var(--paper-line)}
+  .paper .doc b{color:var(--paper-ink)}
+  .paper .doc span{color:var(--paper-soft)}
+  .status{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
+    margin-top:28px;
+  }
+  .stat{
+    padding:18px;
+    border-radius:20px;
+    border:1px solid var(--line);
+    background:rgba(255,255,255,.04);
+  }
+  .stat b{display:block;font-size:1.7rem;line-height:1;color:var(--cyan);margin-bottom:8px}
+  .stat span{color:var(--muted);font-size:.9rem}
+  .callout{
+    margin-top:30px;
+    border-left:4px solid var(--copper);
+    padding:20px 22px;
+    background:rgba(232,132,93,.12);
+    border-radius:0 20px 20px 0;
+  }
+  .warn{
+    margin-top:30px;
+    border:1px solid rgba(255,123,166,.35);
+    background:rgba(255,123,166,.08);
+    border-radius:24px;
+    padding:22px;
+    color:#F7DDE6;
+  }
+  footer{padding:46px 0;color:var(--dim);font-size:.9rem}
+  @media (max-width:900px){
+    .navlinks{display:none}
+    .span-3,.span-4,.span-5,.span-6,.span-7,.span-8{grid-column:span 12}
+    .characters,.gallery,.docs,.status{grid-template-columns:1fr}
+    .ep{grid-template-columns:1fr}
+    .hero{min-height:82vh}
+  }
+</style>
+</head>
+<body>
+<nav class="nav" aria-label="Navegação">
+  <div class="wrap">
+    <a class="brand" href="#topo">Córtex <span>City</span></a>
+    <div class="navlinks">
+      <a href="#pacote">Pacote</a>
+      <a href="#premissa">Premissa</a>
+      <a href="#temporada">T1</a>
+      <a href="#personagens">Personagens</a>
+      <a href="#visual">Visual</a>
+      <a href="#futuro">Futuro</a>
+      <a href="#negocio">IP</a>
+      <a href="#documentos">Docs</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="topo">
+  <div class="wrap">
+    <p class="eyebrow">Dossiê confidencial para parceiro criativo e comercial</p>
+    <h1>Córtex <span class="city">City</span></h1>
+    <p class="subtitle">Uma série animada sobre um garoto de 12 anos tentando pertencer à escola nova sem perder a parte de si que o trouxe até ali.</p>
+    <div class="hero-meta">
+      <span class="pill">10 x 22 min</span>
+      <span class="pill">Tween 10-13 no núcleo</span>
+      <span class="pill">Alcance 8-13 em co-viewing</span>
+      <span class="pill">Aventura + comédia + sci-fi biológico</span>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="pacote">
+  <div class="wrap">
+    <p class="eyebrow">O que existe hoje</p>
+    <h2>Não é só uma premissa. A série já existe em forma de mundo, temporada, personagens e material de apresentação.</h2>
+    <p class="lede">Esta apresentação foi pensada para alguém que possa avaliar o projeto com olhos criativos, comerciais e jurídicos. Ela resume a bíblia, a T1, os roteiros, a ciência, a arte, o plano de negócios e o mapa de documentos. Os links no final abrem as fontes integrais.</p>
+    <div class="status">
+      <div class="stat"><b>10</b><span>episódios da T1 mapeados, com relógio serial único.</span></div>
+      <div class="stat"><b>2</b><span>roteiros plenos de 22 min: piloto e episódio 2.</span></div>
+      <div class="stat"><b>21</b><span>camadas de canon, produção, ciência, pitch e checklist.</span></div>
+      <div class="stat"><b>1</b><span>rota comercial: autor/licenciante + produtora brasileira.</span></div>
+    </div>
+    <div class="grid" style="margin-top:34px">
+      <div class="card span-7">
+        <h3>Material criativo</h3>
+        <p>Bíblia final integrada, mundo e regras, personagens, motor da temporada, dossiês profundos, roteiro do piloto, roteiro do Ep. 2 e beat sheets dos Eps. 2 a 10.</p>
+        <p>No centro da série está Léo Macedo, 12 anos: ele saiu do Méier para Copacabana e tenta caber na escola nova sem apagar o menino que desenhava mapas com Pedro.</p>
+      </div>
+      <div class="card span-5">
+        <h3>Material de venda</h3>
+        <p>Pitch deck em texto, sizzle de 90 segundos, cenas de audição, guia do pacote, encarte PDF/DOCX, plano de negócios e estratégia de proteção da IP.</p>
+        <p>O alvo é uma produtora brasileira independente de animação ou infantil/tween, com rota para desenvolvimento, fomento, canal e distribuição.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="paper" id="premissa">
+  <div class="wrap">
+    <p class="eyebrow">A promessa</p>
+    <h2>Um garoto tentando caber. Uma cidade tentando decidir o que fica de pé.</h2>
+    <p class="quote">Córtex City é sobre as estradas que você constrói - e as que deixa cair quando tenta caber.</p>
+    <div class="grid">
+      <div class="card span-6">
+        <h3>Logline</h3>
+        <p>Léo Macedo, 12 anos, só quer caber numa escola nova sem apagar o menino que veio do Méier - mas, dentro da cabeça dele, uma cidade inteira entra em obras quando cada escolha de pertencimento começa a reconstruir quem ele é.</p>
+      </div>
+      <div class="card span-6">
+        <h3>O diferencial</h3>
+        <p>A série não dramatiza emoções abstratas nem faz uma excursão pelo corpo humano. Ela dramatiza neuroplasticidade: uso, desuso, poda, mielina, sono, recompensa, foco, memória e responsabilidade.</p>
+      </div>
+      <div class="card span-12">
+        <h3>A pergunta da série</h3>
+        <p>Se tanto do que eu faço é automático - disparado por células, hormônios e hábitos que eu não escolhi - o que ainda é responsabilidade minha?</p>
+        <p>A resposta da temporada não é “você controla tudo” nem “você não controla nada”. É a frase que organiza a obra: <strong>você não escolhe o primeiro impulso, mas é o engenheiro do próximo.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="mundo">
+  <div class="wrap">
+    <p class="eyebrow">O mundo</p>
+    <h2>Uma fantasia com regras claras.</h2>
+    <p class="lede">Córtex City é uma metrópole viva dentro do cérebro de Léo. Cada distrito ocupa uma função real. Cada rua muda quando Léo usa ou abandona uma parte de si. A ciência sustenta a física do mundo, mas a tela mostra aventura, humor, custo e escolha.</p>
+    <div class="grid" style="margin-top:34px">
+      <figure class="card img-card span-7">
+        <img src="output/generated/keyart/B_reveal_9x16.png" alt="Vista vertical de Córtex City em obras, com rodovias luminosas e a Metrópole Frontal em andaimes">
+        <figcaption class="cap">A cidade em obras: a adolescência como infraestrutura em construção.</figcaption>
+      </figure>
+      <div class="span-5 list">
+        <div class="item"><span class="num">1</span><div><h3>Metrópole Frontal</h3><p>A prefeitura das funções executivas, ainda em andaimes. Não falta “força de vontade”; falta obra pronta.</p></div></div>
+        <div class="item"><span class="num">2</span><div><h3>Fortaleza da Amígdala</h3><p>A segurança que chega em milissegundos. Amy ama Léo; seu defeito é o excesso de zelo.</p></div></div>
+        <div class="item"><span class="num">3</span><div><h3>Arquivos do Hipocampo</h3><p>Mapas vivos de memória, bondes noturnos e a estrada antiga que carrega Pedro, música, traço e voz de casa.</p></div></div>
+        <div class="item"><span class="num">4</span><div><h3>Praça Accumbens</h3><p>O neon da recompensa. Dopa acende o “quase lá” e some no instante da vitória.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="paper" id="temporada">
+  <div class="wrap">
+    <p class="eyebrow">Temporada 1</p>
+    <h2>De quem é o Léo?</h2>
+    <p class="lede">A T1 é serializada em dez episódios. Por fora, Léo tenta pertencer ao Santa Clara. Por dentro, a cidade marca para poda a estrada velha dos mapas que ele fazia com Pedro. Cada episódio resolve um conflito da semana, mas empurra a mesma perda silenciosa.</p>
+    <div class="timeline">
+      <div class="ep"><div class="n">Ep. 1</div><div><h3>O Grande Blecaute</h3><span class="tema">ansiedade</span></div><p>Léo chega ao Santa Clara e trava quando precisa se apresentar. Por fora, é o primeiro constrangimento da escola nova; por dentro, Amy toma as avenidas, Broca engasga, Wernicke improvisa e a Metrópole Frontal ainda não consegue organizar a fala. Aqui aparece a regra de ouro da série: Córtex City não salva Léo sozinha; ela amplifica um gesto real dele. A pequena vitória não é virar confiante; é pedir água, sair andando e deixar aberta a frase que a temporada inteira vai completar: “eu sou o Léo, vim do Méier”.</p></div>
+      <div class="ep"><div class="n">Ep. 2</div><div><h3>Quem É Você?</h3><span class="tema">identidade</span></div><p>Depois do blecaute, Solange tenta ajudar com uma atividade de “quem sou eu”, mas o exercício vira pressão para Léo montar uma versão lisa, aceitável e sem Méier. Dentro da cidade, vários módulos tentam defini-lo por pedaços: rosto, fala, risco, performance. Identidade deixa de ser discurso e vira cena: a vontade de editar a própria biografia para caber fica visível. Davi percebe um traço antigo no caderno; Pedro manda um áudio com um apelido que só os dois entendem; Léo quase responde e recua.</p></div>
+      <div class="ep"><div class="n">Ep. 3</div><div><h3>A Estrada dos 10 Mil Tropeços</h3><span class="tema">mielinização</span></div><p>A roda de música do fim do semestre entra no horizonte, e Léo quer tocar violão bem o bastante para ser visto pela turma e talvez pelo pai. A cidade mostra a prática como estrada real: no começo é lama, tropeço e frustração; depois, repetição sem plateia começa a virar asfalto. “Talento” dá lugar a construção: errar sozinho também é obra. Enquanto Léo inaugura a estrada nova do violão, os Coveiros marcam a estrada velha dos mapas com Pedro, e a temporada ganha seu primeiro prazo visível.</p></div>
+      <div class="ep"><div class="n">Ep. 4</div><div><h3>O Mapa Que Mudava</h3><span class="tema">memória</span></div><p>Léo descobre que reler matéria não é o mesmo que lembrar, e a Sra. Hipo transforma estudo em mapas vivos: uma pergunta acende uma rua, um desenho abre uma travessa, um caminho repetido firma o trilho. Aquilo que ele escondia para não parecer “de fora” vira ferramenta para aprender. Não é nostalgia; é função dramática. O jeito antigo de desenhar ainda salva Léo, mas ele continua sem honrar Pedro, e a estrada velha recebe mais silêncio.</p></div>
+      <div class="ep"><div class="n">Ep. 5</div><div><h3>O Sequestro Noturno</h3><span class="tema">sono</span></div><p>Léo vira a noite preso na tela, no jogo e no “só mais um”, e paga a conta no dia seguinte. Dentro da cidade, o bonde noturno não sai, a Sra. Hipo não consolida rotas, e restos do dia entopem os corredores. O sono vira aventura visual sem moralismo: não é “largue o celular porque faz mal”, é “sem noite, a cidade não consegue terminar a obra”. O golpe emocional vem quando Léo mente para Pedro pela primeira vez, dizendo “depois te ligo”, e a prova perdida continua perdida.</p></div>
+      <div class="ep"><div class="n">Ep. 6</div><div><h3>A Máquina do Mais Um</h3><span class="tema">recompensa</span></div><p>A Praça Accumbens vira uma máquina brilhante que promete fechar a conta no próximo clique, na próxima figurinha, na próxima partida. Dopa não entrega felicidade; entrega quase, e o quase ocupa o tempo de manutenção da cidade. A diferença entre querer e gostar aparece sem palestra e sem nome técnico. O custo não é uma tragédia grande: Davi espera, Pedro fica para depois, a estrada velha pega poeira nova, e Léo percebe tarde que o “mais um” cobrou um pedaço real do dia.</p></div>
+      <div class="ep"><div class="n">Ep. 7</div><div><h3>Os de Fora</h3><span class="tema">tribo</span></div><p>Léo tenta garantir lugar no grupo do Murilo e ri da humilhação de Theo no momento em que deveria ter escolhido melhor. Otto mostra o lado ambíguo do pertencimento: o mesmo abraço que aquece o “nós” também pode erguer uma muralha contra alguém. A reparação não vem por uma fala bonita; vem quando Léo senta com Theo, divide espaço e aceita perder status. Por dentro, o pacto entre Amy e o Prefeito falha pela primeira vez, a Névoa sobe no meio dos prédios e o público entende que pertencer ao grupo errado tem custo urbano.</p></div>
+      <div class="ep"><div class="n">Ep. 8</div><div><h3>A Promessa do Beto</h3><span class="tema">pai</span></div><p>Beto manda um áudio carinhoso, imperfeito, dizendo que talvez consiga ir à roda. Isso acende um palco antes da hora dentro de Córtex City: expectativa, medo de decepcionar, vontade de tocar uma música que o pai aprove. O pai não precisa ser vilão para machucar; basta ser intermitente, quente o suficiente para Léo esperar e incerto o suficiente para deixar buraco. A música própria de Léo quase vira cópia para agradar Beto, e a melodia do Méier aparece pequena, resistindo dentro do arranjo.</p></div>
+      <div class="ep"><div class="n">Ep. 9</div><div><h3>A Mesa do Theo</h3><span class="tema">reparação</span></div><p>Depois da reparação pública, vem a parte menos cinematográfica e mais difícil: continuar reparando quando ninguém está olhando. Theo aceita dividir uma mesa de trabalho com Léo, mas não vira amigo por decreto; a ponte precisa de manutenção, não de confete. Desculpa não compra absolvição; compra uma próxima chance de agir direito. Enquanto Léo dá crédito aos mapas de Theo e usa o próprio traço sem esconder, Pedro emudece pela primeira vez, e o silêncio dói mais do que uma cobrança.</p></div>
+      <div class="ep"><div class="n">Ep. 10</div><div><h3>A Roda</h3><span class="tema">finale</span></div><p>A roda de música cai no mesmo sábado do aniversário de Pedro, e Léo não consegue estar nos dois lugares. O finale junta tudo: a estrada do violão construída no Ep. 3, o sono que custou no Ep. 5, a reparação com Theo, o pacto enfim aceito entre Amy e Prefeito, e a estrada velha quase podada sob Névoa no topo. A vitória não vem limpa: Beto falta, Theo não perdoa inteiro, a panelinha não coroa Léo e a estrada de Pedro sobrevive fina, não restaurada. Mesmo assim, Léo toca a própria música com medo, grava para Pedro e prova a tese da série: ele não escolheu o primeiro impulso, mas escolheu qual estrada manter viva.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="personagens">
+  <div class="wrap">
+    <p class="eyebrow">Elenco</p>
+    <h2>Personagens com função dramática e vontade própria.</h2>
+    <p class="lede">Os moradores internos não são professores de biologia. Eles querem, erram, fazem piada e carregam uma função real do cérebro. A regra é simples: nenhuma estrutura biológica vira vilã moral.</p>
+    <div class="characters">
+      <article class="char"><img src="output/generated/keyart/B_astri.png" alt="Astri, a engenheira astrócito"><div><h3>Astri</h3><p>A astrócito engenheira. Nutre, repara e decide o que a cidade reforça ou deixa cair.</p></div></article>
+      <article class="char"><img src="output/generated/keyart/B_spike_v2.png" alt="Spike, o impulso elétrico"><div><h3>Spike</h3><p>O potencial de ação veloz demais. Acha que escolhe, mas descobre que entrega.</p></div></article>
+      <article class="char"><img src="output/generated/keyart/B_amy.png" alt="Comandante Amy, chefe da Amígdala"><div><h3>Amy</h3><p>A comandante da Amígdala. Não é vilã: é a guardiã que chega antes de todo mundo.</p></div></article>
+      <article class="char"><img src="output/generated/keyart/B_frontal.png" alt="Prefeito Frontal em prédio de obra"><div><h3>Prefeito Frontal</h3><p>Jovem, competente e atrasado pela própria obra. A autoridade ainda está em construção.</p></div></article>
+      <article class="char"><img src="output/generated/keyart/B_hipo_v2.png" alt="Sra. Hipo, bibliotecária de mapas vivos"><div><h3>Sra. Hipo</h3><p>A bibliotecária de mapas vivos e guia dos bondes noturnos da memória.</p></div></article>
+      <article class="char"><img src="output/generated/keyart/B_leo.png" alt="Léo Macedo no corredor do prédio"><div><h3>Léo</h3><p>O garoto de fora. Córtex City só importa porque Léo importa.</p></div></article>
+      <article class="char"><img src="output/generated/keyart/B_otto_v2.png" alt="Otto, o anfitrião de rosa"><div><h3>Otto</h3><p>O encantador da ocitocina: aquece o “nós” e pode gelar quem fica de fora.</p></div></article>
+      <article class="char"><img src="output/generated/keyart/B_glio.png" alt="Capataz Glio, coveiro educado da poda"><div><h3>Glio</h3><p>O capataz da micróglia. Poda com etiqueta. Sob Névoa, perde o critério.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="paper" id="tom">
+  <div class="wrap">
+    <p class="eyebrow">Tom</p>
+    <h2>A comédia mantém a série viva, leve e dramatúrgica.</h2>
+    <div class="grid">
+      <div class="card span-4"><h3>A piada de duas cabeças</h3><p>A criança ri do corpo, do tropeço, da burocracia. O adulto percebe que a gag era o mecanismo científico funcionando por baixo.</p></div>
+      <div class="card span-4"><h3>Drama sem reset</h3><p>O pai falta, Theo não perdoa inteiro, a estrada sobrevive fina. O final é honesto porque não limpa a conta.</p></div>
+      <div class="card span-4"><h3>Ciência invisível</h3><p>Nenhum personagem explica neurociência para a câmera. O mundo mostra estrada, luz, névoa, portão, tráfego e custo.</p></div>
+    </div>
+    <div class="callout">
+      <strong>Posicionamento travado:</strong> a série é tween/família, núcleo 10-13. O adulto é teto conquistado de co-viewing, não público primário. O alcance 8-13 existe quando a criança menor assiste acompanhada.
+    </div>
+  </div>
+</section>
+
+<section id="visual">
+  <div class="wrap">
+    <p class="eyebrow">Concept art recente</p>
+    <h2>O visual já comunica ambição e identidade.</h2>
+    <p class="lede">As imagens abaixo não tentam vender arte final; elas mostram o território visual da série: o Rio cotidiano por fora e a cidade neural por dentro, com personagem 2D autoral e profundidade cinematográfica.</p>
+    <div class="gallery">
+      <figure><img src="output/generated/keyart/HERO_styleB_cortex_reveal.png" alt="Key art hero: Léo e Córtex City"><figcaption>Imagem hero: o mundo de fora e a cidade interna no mesmo quadro.</figcaption></figure>
+      <figure><img src="output/generated/keyart/B_mergulho_keyframe.png" alt="Keyframe do Mergulho"><figcaption>O Mergulho: congelamento do mundo real e descida para a cidade.</figcaption></figure>
+      <figure><img src="output/generated/keyart/B_layer1_amigdala.png" alt="Fortaleza da Amígdala"><figcaption>A Fortaleza da Amígdala: segurança, farol e alarme.</figcaption></figure>
+      <figure><img src="output/generated/keyart/B_layer2_talamo.png" alt="Estação Tálamo"><figcaption>Estação Tálamo: os sentidos como tráfego de chegada.</figcaption></figure>
+      <figure><img src="output/generated/keyart/B_layer4_rodovias_mielina.png" alt="Rodovias de mielina"><figcaption>Rodovias e mielina: repetição virando asfalto.</figcaption></figure>
+      <figure><img src="output/generated/keyart/B_layer5_cofres_hipocampo.png" alt="Cofres do Hipocampo"><figcaption>Hipocampo: mapas vivos, gavetas e bonde noturno.</figcaption></figure>
+      <figure><img src="output/generated/keyart/FORA_rua_movimentada.png" alt="Léo numa rua movimentada de Copacabana"><figcaption>O mundo de fora: Rio cotidiano, não postal turístico permanente.</figcaption></figure>
+      <figure><img src="output/generated/keyart/FORA_leo_praia.png" alt="Léo na praia com outras crianças"><figcaption>O alcance de superfície: pertencimento, turma, praia e vergonha social.</figcaption></figure>
+      <figure><img src="output/generated/keyart/CONTACT_B_chars_final.png" alt="Contact sheet com elenco principal"><figcaption>Contact sheet do elenco interno e Léo.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="paper" id="producao">
+  <div class="wrap">
+    <p class="eyebrow">Direção de produção</p>
+    <h2>Como a série deve parecer, soar e se vender.</h2>
+    <div class="grid">
+      <div class="card span-4">
+        <h3>Visual</h3>
+        <p>Personagens de leitura 2D autoral, com acting e silhueta claros. A cidade pode usar base 3D, câmera, escala e parallax, mas a superfície final precisa parecer desenhada, pintada e viva - nunca plástico de prateleira.</p>
+      </div>
+      <div class="card span-4">
+        <h3>Cor como legenda</h3>
+        <p>Ciano é impulso elétrico; branco-osso é mielina; âmbar é antecipação; dourado é contentamento; verde-ácido é a Névoa do Cortisol; vermelho é farol de alerta, não sangue.</p>
+      </div>
+      <div class="card span-4">
+        <h3>Som e música</h3>
+        <p>O som funciona como segunda legenda invisível: timbre é anatomia, silêncio é inibição, e a música de Léo amarra mapas, Méier, Pedro, pai e roda sem virar explicação.</p>
+      </div>
+      <div class="card span-6">
+        <h3>Marca</h3>
+        <p>Título público: <strong>Córtex City: a Cidade que Esquece</strong>. O subtítulo só funciona se aparecer com estrada, obra ou uso/desuso, para não parecer “memória apagada” genérica.</p>
+      </div>
+      <div class="card span-6">
+        <h3>Material de prova</h3>
+        <p>O pacote inclui sizzle de 90 segundos, três cenas de audição, dois roteiros plenos e um pitch deck de 13 slides. A próxima prova externa ideal é teaser/animatic curto ou cena-piloto de 3 a 5 minutos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="paper" id="ciencia">
+  <div class="wrap">
+    <p class="eyebrow">Rigor e cuidado</p>
+    <h2>Neurobiologia real, sem transformar criança em paciente.</h2>
+    <div class="grid">
+      <div class="card span-6">
+        <h3>O que a série protege</h3>
+        <p>Sem “química boa contra química má”; sem hemisfério lógico vs. criativo; sem força de vontade como bateria; sem poda como dano; sem período crítico como sentença; sem emoção como vilã.</p>
+      </div>
+      <div class="card span-6">
+        <h3>O que ela entrega</h3>
+        <p>Ferramentas da Cidade: gestos pequenos e filmáveis que Léo faz no mundo real - reduzir carga, praticar, dormir, reparar, focar. A ferramenta ajuda; não cura.</p>
+      </div>
+      <div class="card span-12">
+        <h3>Checklist operacional</h3>
+        <p>Todo roteiro, sizzle ou cena nova passa pela régua R1/R2/R3: sem jargão diegético, sem vilania biológica, sem determinismo como desculpa. Entender a causa só vale se abrir caminho para reparação concreta.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="futuro">
+  <div class="wrap">
+    <p class="eyebrow">Fôlego de franquia</p>
+    <h2>A primeira venda está em T1 e T2. O universo tem fôlego para crescer.</h2>
+    <p class="lede">A venda deve liderar com T1-T2, porque esse é o núcleo tween real. As temporadas futuras provam fôlego de mundo, não são a tese principal de compra. A série não precisa prometer oito temporadas para ser vendável, mas já sabe para onde poderia ir.</p>
+    <div class="grid" style="margin-top:30px">
+      <div class="card span-6">
+        <h3>T2 - Corpos Estranhos</h3>
+        <p>Léo aos 13. A cafeína atravessa a Barreira Hematoencefálica e cobra custo físico; Bia entra pela percepção, por Amy, Inês e Otto. A pergunta muda: quem a cidade deixa entrar?</p>
+      </div>
+      <div class="card span-6">
+        <h3>A prova parcial da tese</h3>
+        <p>A T2 já mostra que “lá em cima” não tem um chefe único: Spike rastreia a resposta e encontra cem mãos, não um remetente. Se a série parar em T2, o coração filosófico não fica hipotecado.</p>
+      </div>
+      <div class="card span-3"><h3>T3</h3><p>Querer mais nem sempre é gostar mais: telas, recompensa, risco e Dopa.</p></div>
+      <div class="card span-3"><h3>T4</h3><p>Primeira paixão, ciúme, vergonha, limites e leitura corporal.</p></div>
+      <div class="card span-3"><h3>T5</h3><p>Corpo Caloso e integração, sem mito de hemisfério lógico vs. criativo.</p></div>
+      <div class="card span-3"><h3>T6+</h3><p>Memória profunda, narrativa do eu, dívidas, períodos críticos e governo sem chefe interno.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="negocio">
+  <div class="wrap">
+    <p class="eyebrow">IP e rota comercial</p>
+    <h2>O caminho realista: proteger, empacotar, anexar produtora.</h2>
+    <p class="lede">A estratégia consolidada não é vender diretamente para um grande streamer. É proteger a IP, montar um pacote curto, aproximar uma produtora brasileira independente e negociar uma opção/licença autoral compatível com papel passivo de criador/licenciante.</p>
+    <div class="grid" style="margin-top:30px">
+      <div class="card span-4"><h3>1. Proteção</h3><p>Registrar/depositar bíblia, roteiros, personagens, textos e artes essenciais, com a Biblioteca Nacional como caminho brasileiro de prova de anterioridade. A ideia abstrata não basta; a expressão concreta é o ativo.</p></div>
+      <div class="card span-4"><h3>2. Pacote curto</h3><p>One-pager, deck, bíblia polida, roteiro piloto, arte conceitual, sizzle e term sheet de uma página.</p></div>
+      <div class="card span-4"><h3>3. Produtora</h3><p>Buscar produtoras brasileiras com histórico em animação, ciência, infância/tween e capacidade de fomento/canal.</p></div>
+      <div class="card span-6"><h3>4. Contrato</h3><p>Preferir opção remunerada de desenvolvimento, licença/cessão patrimonial limitada, reversão por inatividade, créditos e royalties autorais.</p></div>
+      <div class="card span-6"><h3>5. Papel do amigo</h3><p>Se a parceria for avançar, definir por escrito se ele será coautor, parceiro comercial, consultor, agente de aproximação ou outra função. Cada rótulo muda direitos, deveres e remuneração.</p></div>
+    </div>
+    <div class="warn">
+      <strong>Nota prática:</strong> antes de registrar a propriedade intelectual em conjunto ou dividir titularidade, vale conversar com advogado de direito autoral/audiovisual. Coautoria não é só ajudar a vender: exige contribuição criativa autoral e muda a titularidade futura da obra.
+    </div>
+  </div>
+</section>
+
+<section class="paper" id="validacao">
+  <div class="wrap">
+    <p class="eyebrow">Estado editorial</p>
+    <h2>O material já foi bastante revisto e testado internamente.</h2>
+    <div class="grid">
+      <div class="card span-4">
+        <h3>Revisão adversarial</h3>
+        <p>O material foi lido por lentes diferentes: roteiro, temporada, ciência, pedagogia, compra, continuidade e comédia. O resultado corrigiu contradições reais entre documentos e deixou decisões importantes registradas no Master Plan.</p>
+      </div>
+      <div class="card span-4">
+        <h3>Leitura interna com foco no público 10-13</h3>
+        <p>A T1 foi revista pela pergunta que interessa para essa faixa: a criança entende, acompanha e quer ver o próximo? O achado central foi simples: o finale honesto funciona, e o primeiro terço precisava puxar melhor, especialmente o Ep. 2.</p>
+      </div>
+      <div class="card span-4">
+        <h3>Posicionamento de público</h3>
+        <p>A hipótese “talvez seja melhor para adultos” foi testada e rejeitada. A leitura consolidada é tween/família: 10-13 no núcleo, família em volta, adulto como teto conquistado de co-viewing.</p>
+      </div>
+      <div class="card span-12">
+        <h3>Limite importante</h3>
+        <p>Essas revisões são ferramentas internas de desenvolvimento, não prova externa de audiência. Quando houver animatic ou leitura dramatizada, o próximo degrau é testar com crianças reais de 10-13.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="paper" id="documentos">
+  <div class="wrap">
+    <p class="eyebrow">Acesso aos materiais</p>
+    <h2>Se quiser ler tudo, comece por aqui.</h2>
+    <p class="lede">O HTML deve bastar para entender a série. Os links abaixo dão acesso ao material completo para leitura profunda, registro, pitch e negociação.</p>
+    <div class="docs">
+      <a class="doc" href="rendered_docs/README.html"><b>README</b><span>Porta de entrada do repositório e lista dos documentos-fonte.</span></a>
+      <a class="doc" href="rendered_docs/00_Master_Plan.html"><b>Master Plan</b><span>Decisões travadas, histórico de auditorias e estado do pacote.</span></a>
+      <a class="doc" href="rendered_docs/00_1_Indice_de_Camadas.html"><b>Índice de camadas</b><span>Mapa completo dos 21 documentos e precedência de canon.</span></a>
+      <a class="doc" href="rendered_docs/01_Logline_Sinopse.html"><b>01 - Logline e sinopse</b><span>Conceito, título oficial, logline e pergunta temática.</span></a>
+      <a class="doc" href="rendered_docs/02_Mundo_e_Regras.html"><b>02 - Mundo e regras</b><span>Distritos, leis da cidade e diferenças em relação a séries de emoções.</span></a>
+      <a class="doc" href="rendered_docs/03_Personagens.html"><b>03 - Personagens</b><span>Fichas canônicas do elenco interno.</span></a>
+      <a class="doc" href="rendered_docs/03_1_Dossies_Personagens.html"><b>03_1 - Dossiês</b><span>Astri, Amy, Davi, Theo, Léo e Pedro em profundidade.</span></a>
+      <a class="doc" href="rendered_docs/04_Mecanica_Neurobiologica.html"><b>04 - Mecânica neurobiológica</b><span>O mecanismo científico por baixo dos personagens e da cidade.</span></a>
+      <a class="doc" href="rendered_docs/05_Arco_Temporada_1.html"><b>05 - Arco da T1</b><span>A temporada serializada e a ordem canônica de dez episódios.</span></a>
+      <a class="doc" href="rendered_docs/05_1_Motor_da_Temporada_T1.html"><b>05_1 - Motor da T1</b><span>Uso/desuso, Pedro, estrada velha e gancho serial.</span></a>
+      <a class="doc" href="rendered_docs/06_Pitch_Bible_Final.html"><b>Pitch Bible final</b><span>Bíblia integrada: conceito, mundo, personagens, T1, tom, ciência e comparáveis.</span></a>
+      <a class="doc" href="rendered_docs/08_Leo_e_o_Mundo_Real.html"><b>08 - Léo e mundo real</b><span>Casa, escola, Copacabana, Méier, turma, família e motor humano.</span></a>
+      <a class="doc" href="rendered_docs/09_1_Roteiro_Piloto_22min.html"><b>Roteiro piloto 22 min</b><span>O Grande Blecaute, versão de produção.</span></a>
+      <a class="doc" href="rendered_docs/09_2_1_Roteiro_Ep02_22min.html"><b>Roteiro Ep. 2</b><span>Quem É Você?, a primeira carta depois do piloto.</span></a>
+      <a class="doc" href="rendered_docs/10_Direcao_de_Arte.html"><b>10 - Direção de arte</b><span>Paleta, linguagem visual, Mergulho, 2D/3D e regra de brasilidade.</span></a>
+      <a class="doc" href="rendered_docs/11_Som_e_Musica.html"><b>11 - Som e música</b><span>A segunda legenda invisível da série.</span></a>
+      <a class="doc" href="rendered_docs/12_Framework_Pedagogico.html"><b>12 - Framework pedagógico</b><span>Como ensinar sem patologizar e sem vender aula.</span></a>
+      <a class="doc" href="rendered_docs/13_Mitologia_e_Serializacao.html"><b>13 - Mitologia</b><span>Caixas de mistério, T2 e fôlego de temporadas futuras.</span></a>
+      <a class="doc" href="rendered_docs/14_Tom_e_Comedia.html"><b>14 - Tom e comédia</b><span>A piada de duas cabeças e a blindagem contra didatismo.</span></a>
+      <a class="doc" href="rendered_docs/15_Novas_Camadas_Cientificas.html"><b>15 - Novas camadas científicas</b><span>Ciência futura com selo de status e cuidado de evidência.</span></a>
+      <a class="doc" href="rendered_docs/16_Pesquisa_Biohacks_Pedagogicos.html"><b>16 - Ferramentas da Cidade</b><span>Pesquisa de utilidade prática reconciliada como gesto dramático.</span></a>
+      <a class="doc" href="rendered_docs/17_Plano_de_Negocios_Workflow.html"><b>17 - Plano de negócios e IP</b><span>Proteção, direitos, produtoras, formatos, opção/licença e cautelas.</span></a>
+      <a class="doc" href="rendered_docs/Anexo_A_Consultoria_Cientifica.html"><b>Anexo A - Consultoria científica</b><span>Raciocínio de sustentação científica e riscos de simplificação.</span></a>
+      <a class="doc" href="rendered_docs/Anexo_B_Densidade_Narrativa.html"><b>Anexo B - Densidade narrativa</b><span>Como manter sofisticação sem perder tração emocional.</span></a>
+      <a class="doc" href="rendered_docs/Anexo_C_Expansao_Universo.html"><b>Anexo C - Expansão do universo</b><span>Temporadas futuras, co-viewing e fôlego de franquia.</span></a>
+      <a class="doc" href="rendered_docs/Anexo_D_Pitch_Comercial.html"><b>Anexo D - Pitch comercial</b><span>Argumentos de venda, comparáveis e encaixe de mercado.</span></a>
+      <a class="doc" href="rendered_docs/18_Sizzle_e_Cenas_de_Audicao.html"><b>Sizzle e cenas de audição</b><span>Trailer de 90 segundos e cenas standalone de tom.</span></a>
+      <a class="doc" href="rendered_docs/19_Identidade_de_Marca.html"><b>19 - Identidade de marca</b><span>Título, taglines, voz de marca e plano-assinatura.</span></a>
+      <a class="doc" href="rendered_docs/20_Pitch_Deck.html"><b>20 - Pitch deck</b><span>Copy de slides e brief visual para uma apresentação de 13 telas.</span></a>
+      <a class="doc" href="rendered_docs/21_Checklist_Operacional_Sala_de_Roteiro.html"><b>21 - Checklist operacional</b><span>Gate R1/R2/R3 para cena, roteiro, sizzle e pitch.</span></a>
+      <a class="doc" href="rendered_docs/Guia_Pacote_de_Pitch_Cortex_City.html"><b>Guia do pacote de pitch</b><span>Como organizar o material para apresentar a terceiros.</span></a>
+      <a class="doc" href="Cortex_City_Encarte_de_Apresentacao.pdf"><b>Encarte PDF</b><span>Material de apresentação exportado para leitura externa.</span></a>
+      <a class="doc" href="output/generated/keyart/"><b>Pasta de key art</b><span>Imagens recentes geradas para personagens, mundo e style frames.</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="proxima">
+  <div class="wrap">
+    <p class="eyebrow">Leitura recomendada para o amigo</p>
+    <h2>Se isso fizer sentido para você, estes são os próximos passos.</h2>
+    <div class="grid">
+      <div class="card span-4"><h3>1. Leia este HTML inteiro</h3><p>Ele dá a visão completa sem obrigar a atravessar todos os documentos de sala.</p></div>
+      <div class="card span-4"><h3>2. Leia a bíblia e o piloto</h3><p>Se a premissa interessar, os próximos materiais são a Pitch Bible final e o roteiro piloto de 22 minutos, ambos linkados na seção de documentos.</p></div>
+      <div class="card span-4"><h3>3. Leia o plano de IP</h3><p>Antes de falar em registro conjunto ou depósito na Biblioteca Nacional, entenda a diferença entre coautoria, parceria comercial e ajuda na venda.</p></div>
+      <div class="card span-12">
+        <h3>Pergunta decisiva</h3>
+        <p>Antes de discutir titularidade, vale responder uma coisa mais simples: você quer entrar como leitor estratégico e ponte comercial, ou como parceiro criativo com participação formal? A primeira opção pode ser simples. A segunda precisa ser definida com cuidado, porque altera a propriedade intelectual desde a origem.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Córtex City: a Cidade que Esquece</strong> - material confidencial de apresentação. Ciência por baixo, história primeiro.</p>
+    <p>Última atualização desta página: 2026-07-07. Fontes principais: Pitch Bible final, motor da T1, plano de negócios/IP, pitch deck, índice de camadas e key art recente.</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Master Plan: Córtex City</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="assets/doc.css" />
+</head>
+<body>
+<div class="topbar">
+  <div class="topbar-inner">
+    <a href="../Apresentacao_CortexCity.html#documentos">Voltar ao dossiê</a>
+    <span>Córtex City - documento renderizado para leitura</span>
+  </div>
+</div>
+<div class="shell">
+<main>
+<header id="title-block-header">
+<h1 class="title">Master Plan: Córtex City</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#master-plan-córtex-city"
+id="toc-master-plan-córtex-city">Master Plan: Córtex City</a>
+<ul>
+<li><a href="#objetivo" id="toc-objetivo">Objetivo</a></li>
+<li><a href="#estrutura-de-diretórios-e-arquivos"
+id="toc-estrutura-de-diretórios-e-arquivos">Estrutura de Diretórios e
+Arquivos</a></li>
+<li><a href="#estado-atual-v2" id="toc-estado-atual-v2">Estado Atual
+(v2)</a>
+<ul>
+<li><a href="#arquivos-da-v2" id="toc-arquivos-da-v2">Arquivos da
+v2</a></li>
+<li><a href="#principais-elevações-da-v2"
+id="toc-principais-elevações-da-v2">Principais elevações da v2</a></li>
+</ul></li>
+<li><a href="#estado-atual-v3--camadas-de-produção"
+id="toc-estado-atual-v3--camadas-de-produção">Estado Atual (v3 — camadas
+de produção)</a>
+<ul>
+<li><a href="#arquivos-da-v3" id="toc-arquivos-da-v3">Arquivos da
+v3</a></li>
+</ul></li>
+<li><a href="#estado-atual-v4--ferramentas-da-cidade"
+id="toc-estado-atual-v4--ferramentas-da-cidade">Estado Atual (v4 —
+Ferramentas da Cidade)</a>
+<ul>
+<li><a href="#arquivo-da-v4" id="toc-arquivo-da-v4">Arquivo da
+v4</a></li>
+<li><a href="#decisões-de-integração-da-v4"
+id="toc-decisões-de-integração-da-v4">Decisões de integração da
+v4</a></li>
+</ul></li>
+<li><a href="#estado-atual-v5--negócio-direitos-e-mercado"
+id="toc-estado-atual-v5--negócio-direitos-e-mercado">Estado Atual (v5 —
+Negócio, Direitos e Mercado)</a>
+<ul>
+<li><a href="#arquivo-da-v5" id="toc-arquivo-da-v5">Arquivo da
+v5</a></li>
+<li><a href="#decisões-de-integração-da-v5"
+id="toc-decisões-de-integração-da-v5">Decisões de integração da
+v5</a></li>
+</ul></li>
+<li><a href="#estado-atual-v6--hardening-de-planejamento"
+id="toc-estado-atual-v6--hardening-de-planejamento">Estado Atual (v6 —
+Hardening de Planejamento)</a>
+<ul>
+<li><a href="#decisões-de-integração-da-v6"
+id="toc-decisões-de-integração-da-v6">Decisões de integração da
+v6</a></li>
+<li><a
+href="#decisões-travadas-na-reconciliação-propagadas--ver-índice-para-detalhe"
+id="toc-decisões-travadas-na-reconciliação-propagadas--ver-índice-para-detalhe">Decisões
+travadas na reconciliação (propagadas — ver índice para
+detalhe)</a></li>
+</ul></li>
+<li><a href="#estado-atual-v7--cirurgia-dramática-pós-diagnóstico"
+id="toc-estado-atual-v7--cirurgia-dramática-pós-diagnóstico">Estado
+Atual (v7 — Cirurgia Dramática pós-diagnóstico)</a>
+<ul>
+<li><a href="#decisões-de-integração-da-v7"
+id="toc-decisões-de-integração-da-v7">Decisões de integração da
+v7</a></li>
+<li><a
+href="#novos-artefatos-de-prova-e-venda-da-v7-execução-por-agentes-revisados-e-reconciliados"
+id="toc-novos-artefatos-de-prova-e-venda-da-v7-execução-por-agentes-revisados-e-reconciliados">Novos
+artefatos de prova e venda da v7 (execução por agentes, revisados e
+reconciliados)</a></li>
+<li><a
+href="#achados-do-painel-ainda-em-aberto-não-resolvidos-nesta-rodada--exigem-decisão-do-criador-ou-trabalho-externo"
+id="toc-achados-do-painel-ainda-em-aberto-não-resolvidos-nesta-rodada--exigem-decisão-do-criador-ou-trabalho-externo">Achados
+do painel ainda em aberto (não resolvidos nesta rodada — exigem decisão
+do criador ou trabalho externo)</a></li>
+</ul></li>
+<li><a href="#estado-atual-v8--base-científica-consolidada"
+id="toc-estado-atual-v8--base-científica-consolidada">Estado Atual (v8 —
+Base Científica Consolidada)</a>
+<ul>
+<li><a href="#decisões-de-integração-da-v8"
+id="toc-decisões-de-integração-da-v8">Decisões de integração da
+v8</a></li>
+</ul></li>
+<li><a href="#estado-atual-v9--auditoria-adversarial-total"
+id="toc-estado-atual-v9--auditoria-adversarial-total">Estado Atual (v9 —
+Auditoria Adversarial Total)</a>
+<ul>
+<li><a
+href="#correções-aplicadas-na-v9-todas-em-cena-nenhuma-toca-decisão-travada"
+id="toc-correções-aplicadas-na-v9-todas-em-cena-nenhuma-toca-decisão-travada">Correções
+aplicadas na v9 (todas em cena, nenhuma toca decisão travada)</a></li>
+<li><a href="#refutados-pela-fonte-a-v7-de-fato-corrigiu-nas-cenas"
+id="toc-refutados-pela-fonte-a-v7-de-fato-corrigiu-nas-cenas">Refutados
+pela fonte (a v7 de fato corrigiu nas cenas)</a></li>
+<li><a
+href="#itens-de-decisão-do-criador--resolvidos-na-v91-aprovação-do-criador-em-02072026"
+id="toc-itens-de-decisão-do-criador--resolvidos-na-v91-aprovação-do-criador-em-02072026">Itens
+de decisão do criador — resolvidos na v9.1 (aprovação do criador em
+02/07/2026)</a></li>
+</ul></li>
+<li><a href="#estado-atual-v10--auditoria-lente-criança"
+id="toc-estado-atual-v10--auditoria-lente-criança">Estado Atual (v10 —
+Auditoria Lente-Criança)</a>
+<ul>
+<li><a href="#resultado-da-v10" id="toc-resultado-da-v10">Resultado da
+v10</a></li>
+</ul></li>
+<li><a href="#próximos-passos-sugeridos"
+id="toc-próximos-passos-sugeridos">Próximos Passos (sugeridos)</a></li>
+</ul></li>
+</ul>
+</nav>
+<section id="master-plan-córtex-city" class="level1">
+<h1>Master Plan: Córtex City</h1>
+<section id="objetivo" class="level2">
+<h2>Objetivo</h2>
+<p>Córtex City é uma série animada de neurobiologia — tween 10–13 no
+núcleo, família em volta (alcance 8–13 em co-viewing, nunca faixa
+direta) e um teto adulto que assiste por vontade, não por dever —
+ciência real, drama real, sem condescendência em nenhuma das pontas. O
+documento de apresentação criativa é o
+<code>06_Pitch_Bible_Final.md</code>; a rota comercial, jurídica e
+financeira está consolidada em
+<code>17_Plano_de_Negocios_Workflow.md</code>.</p>
+</section>
+<section id="estrutura-de-diretórios-e-arquivos" class="level2">
+<h2>Estrutura de Diretórios e Arquivos</h2>
+<ol type="1">
+<li><code>01_Logline_Sinopse.md</code>: A premissa central, logline (1
+frase) e sinopse (1 parágrafo e 1 página).</li>
+<li><code>02_Mundo_e_Regras.md</code>: Como funciona o “Cérebro” como um
+universo. Onde ficam as memórias, como as mensagens viajam (trens de
+impulso elétrico), o papel da barreira hematoencefálica, etc.</li>
+<li><code>03_Personagens.md</code>: Biografias dos protagonistas,
+moradores-órgão, agentes químicos e pressões externas/biológicas, sem
+tratar emoções ou hormônios como vilões.</li>
+<li><code>04_Mecanica_Neurobiologica.md</code>: O embasamento científico
+de cada conceito adaptado (Neuroplasticidade, Mielinização).</li>
+<li><code>05_Arco_Temporada_1.md</code>: O arco da primeira temporada e
+5 ideias de episódios.</li>
+<li><code>06_Pitch_Bible_Final.md</code>: A compilação polida de todos
+os documentos acima, pronta para exportação (PDF).</li>
+<li><code>17_Plano_de_Negocios_Workflow.md</code>: Plano de negócio,
+direitos, option agreement, produtoras-alvo e estratégia de monetização
+passiva da IP.</li>
+<li><code>pesquisa/Relatorio_Consolidado_Base_Cientifica_CortexCity.md</code>:
+documento-diretor científico de bastidor, com matriz multiobra para
+auditar mecânicas.</li>
+<li><code>21_Checklist_Operacional_Sala_de_Roteiro.md</code>: gate de
+sala para novas cenas, episódios e materiais de pitch.</li>
+</ol>
+</section>
+<section id="estado-atual-v2" class="level2">
+<h2>Estado Atual (v2)</h2>
+<p>A v1 (docs 01–06) está completa. A v2 elevou o projeto ao integrar
+duas obras de base, Sapolsky (<em>Comporte-se</em>) e Pinker (<em>Como a
+Mente Funciona</em>), via quatro agentes especializados: ciência,
+narrativa, mundo e pitch.</p>
+<section id="arquivos-da-v2" class="level3">
+<h3>Arquivos da v2</h3>
+<ul>
+<li><code>01</code>–<code>05</code>: docs-fonte reescritos sob a v2
+(logline, mundo, personagens, mecânica, arco).</li>
+<li><code>06_Pitch_Bible_Final.md</code>: a bíblia integrada e polida
+(documento principal de apresentação).</li>
+<li><code>07_*</code>: removido; o conteúdo foi dobrado no
+<code>06_Pitch_Bible_Final.md</code>.</li>
+<li><code>Anexo_A_Consultoria_Cientifica.md</code>: correções de rigor e
+ciência a evitar (crise de replicação).</li>
+<li><code>Anexo_B_Densidade_Narrativa.md</code>: formato “Mergulho”,
+espinha temática, livre-arbítrio responsável.</li>
+<li><code>Anexo_C_Expansao_Universo.md</code>: novos personagens,
+regiões, episódios 6–10, teaser T2.</li>
+<li><code>Anexo_D_Pitch_Comercial.md</code>: logline de venda,
+posicionamento, franquia, estrutura de pitch.</li>
+<li><code>Pesquisa_Livro_Behave.md</code> /
+<code>Pesquisa_Livro_HowTheMindWorks.md</code>: as pesquisas-base.</li>
+</ul>
+</section>
+<section id="principais-elevações-da-v2" class="level3">
+<h3>Principais elevações da v2</h3>
+<ol type="1">
+<li>Ocitocina deixa de ser “antídoto puro” e vira cola tribal de dois
+gumes (Otto, o Encantador).</li>
+<li>Dopamina corrigida: antecipação/erro de predição, não o prazer
+recebido.</li>
+<li>“Prefeito sem bateria” (ego depletion, mito) trocado por imaturidade
+do CPF + prioridade de ameaça da amígdala.</li>
+<li>Amígdala (Amy) reabilitada de vilã a heroína trágica; emoções como
+programas funcionais (Pinker).</li>
+<li>Formato “Mergulho” (escala temporal de Sapolsky) como assinatura
+estrutural da série.</li>
+<li>Espinha temática com peso moral + visão de temporadas (cada idade de
+Léo = nova ciência).</li>
+</ol>
+</section>
+</section>
+<section id="estado-atual-v3--camadas-de-produção" class="level2">
+<h2>Estado Atual (v3 — camadas de produção)</h2>
+<p>A v3 expandiu a bíblia com oito camadas novas (08–15), escritas por
+especialistas distintos e depois submetidas a uma revisão adversarial
+multiespecialista que reprovou a primeira versão por bloqueadores reais.
+Os bloqueadores foram corrigidos e o material reconciliado. O mapa
+completo está em <code>00_1_Indice_de_Camadas.md</code>.</p>
+<section id="arquivos-da-v3" class="level3">
+<h3>Arquivos da v3</h3>
+<ul>
+<li><code>08_Leo_e_o_Mundo_Real.md</code>: o mundo humano fora do crânio
+— casa, bairro, escola, a arquitetura de dupla trama. É a bíblia do
+mundo humano e arbitra conflitos com o piloto.</li>
+<li><code>09_Roteiro_Piloto_Ep1.md</code>: o roteiro completo do Ep. 1
+(“O Grande Blecaute”) no formato Mergulho.</li>
+<li><code>10_Direcao_de_Arte.md</code>: linguagem visual, paleta como
+sistema, gramática do Mergulho, evolução da cidade.</li>
+<li><code>11_Som_e_Musica.md</code>: trilha, leitmotifs, timbre como
+anatomia, o silêncio como inibição.</li>
+<li><code>12_Framework_Pedagogico.md</code>: objetivos por episódio,
+guard-rails de saúde mental, mapa BNCC, guia de co-viewing.</li>
+<li><code>13_Mitologia_e_Serializacao.md</code>: o Registro de
+Cicatrizes, as três Caixas, o mapa de oito temporadas.</li>
+<li><code>14_Tom_e_Comedia.md</code>: a voz cômica, os tipos de gag,
+onde o tom muda de marcha.</li>
+<li><code>15_Novas_Camadas_Cientificas.md</code>: seis novos
+distritos-ciência (GABA, circadiano, modo padrão, preditivo, espelho,
+intestino-cérebro).</li>
+<li><code>00_1_Indice_de_Camadas.md</code>: índice de navegação,
+decisões travadas e convenção de precedência.</li>
+</ul>
+</section>
+</section>
+<section id="estado-atual-v4--ferramentas-da-cidade" class="level2">
+<h2>Estado Atual (v4 — Ferramentas da Cidade)</h2>
+<p>A v4 parte de biohacks cientificamente embasados e os incorpora ao
+tom da série sob o nome <strong>Ferramentas da Cidade</strong>. Na série
+e no pitch, a palavra “biohack” não aparece: fica reservada à pesquisa
+interna. Na tela, cada ferramenta é um gesto pequeno, seguro e cotidiano
+que Léo faz no mundo real depois de entender a mecânica da cidade.</p>
+<section id="arquivo-da-v4" class="level3">
+<h3>Arquivo da v4</h3>
+<ul>
+<li><code>16_Pesquisa_Biohacks_Pedagogicos.md</code>: pesquisa-base
+sobre memória, foco, respiração, sono/circadiano, açúcar, esporte,
+inteligência emocional e relações, com régua verde/amarelo/vermelho e
+guard-rails contra neuromito.</li>
+</ul>
+</section>
+<section id="decisões-de-integração-da-v4" class="level3">
+<h3>Decisões de integração da v4</h3>
+<ol type="1">
+<li>A T1 usa uma ferramenta principal por episódio: compasso da
+respiração, repetição, sono/luz, reparação social e foco como
+filtro.</li>
+<li>A ferramenta aparece como gesto dramático de Léo, nunca como
+instrução, checklist ou fala pedagógica longa.</li>
+<li>Açúcar, esporte, memória escolar e movimento como regulador ficam
+para catálogo/T2, salvo textura orgânica.</li>
+<li>A utilidade para adultos e escolas fica em
+<code>12_Framework_Pedagogico.md</code>, co-viewing e materiais
+externos; a tela continua “história primeiro, ciência por baixo”.</li>
+<li>Explicações sutis podem entrar como fala-ponte curta, em personagem,
+quando a imagem já mostrou o mecanismo e a fala melhora a transferência;
+aula, protocolo e jargão continuam fora da tela.</li>
+</ol>
+</section>
+</section>
+<section id="estado-atual-v5--negócio-direitos-e-mercado"
+class="level2">
+<h2>Estado Atual (v5 — Negócio, Direitos e Mercado)</h2>
+<p>A v5 consolidou a estratégia de monetização da IP num único
+documento, substituindo os arquivos separados de workflow, modelagem de
+direitos, pitch para produtora e option agreement.</p>
+<section id="arquivo-da-v5" class="level3">
+<h3>Arquivo da v5</h3>
+<ul>
+<li><code>17_Plano_de_Negocios_Workflow.md</code>: documento canônico de
+negócio. Define a rota recomendada: proteger a IP, montar pacote de
+pitch enxuto, abordar produtora brasileira independente elegível a
+fomento e negociar opção/licença autoral passiva.</li>
+</ul>
+</section>
+<section id="decisões-de-integração-da-v5" class="level3">
+<h3>Decisões de integração da v5</h3>
+<ol type="1">
+<li>O criador atua como autor/licenciante, sem coprodução, showrunning,
+captação ou gestão operacional.</li>
+<li>O formato-alvo criativo é série animada de 22 minutos. A T1 está
+desenhada como cinco episódios-âncora e oito cartas de expansão para 10
+ou 13 episódios. 11 minutos é fallback de mercado.</li>
+<li>A direção artística recomendada é 2D autoral com profundidade,
+usando 3D de apoio para cidade, câmera, escala e Mergulho, sem aparência
+de CG plástico.</li>
+<li>O longa fica como possibilidade futura, depois que a cidade existir
+na cabeça do público.</li>
+</ol>
+</section>
+</section>
+<section id="estado-atual-v6--hardening-de-planejamento" class="level2">
+<h2>Estado Atual (v6 — Hardening de Planejamento)</h2>
+<p>A v6 consolidou a rodada de especialistas sobre arco de temporada,
+macroarco de oito temporadas, segurança pedagógica e vendabilidade. O
+ajuste não reescreve o piloto: fortalece a engenharia de temporada e
+alinha pitch, mitologia e negócio.</p>
+<section id="decisões-de-integração-da-v6" class="level3">
+<h3>Decisões de integração da v6</h3>
+<ol type="1">
+<li>O pitch lidera com Léo e pertencimento: “um garoto tentando caber
+numa escola nova enquanto sua cidade cerebral entra em obras”. Ciência é
+diferencial e defesa, não a primeira razão para assistir.</li>
+<li>A T1 opera por cinco episódios-âncora (posições 1, 3, 5, 7 e 10 da
+ordem canônica) e oito cartas de expansão. O projeto pode oferecer 10 ou
+13 episódios sem inventar outro arco.</li>
+<li>Cada episódio da T1 usa um cartão de motor dramático: desejo de Léo,
+pressão externa, erro, reparação concreta, cicatriz/juro e gag
+dominante.</li>
+<li>Pedro, Davi, Murilo, Beto, Theo e Solange têm beats concretos de
+progressão, para que a temporada não vire catálogo de conceitos.</li>
+<li>O macroarco de oito temporadas começa por motor humano antes da
+neurociência.</li>
+<li>T8 aos 19 anos é “Inauguração Parcial”: cidade mais governável, não
+córtex pronto. Fechamento biológico completo exige salto/epílogo por
+volta dos 24-25.</li>
+<li>T2 separa fronteira física (cafeína/Barreira) de fronteira social
+(Bia/Otto/tribo). Bia não atravessa a Barreira Hematoencefálica.</li>
+<li>Novas travas científicas: adrenalina, noradrenalina e cortisol não
+são sinônimos; hormônios modulam, não determinam; hemisférios são
+integração; períodos críticos não são fatalismo; cafeína não é pânico
+moral.</li>
+</ol>
+</section>
+<section
+id="decisões-travadas-na-reconciliação-propagadas--ver-índice-para-detalhe"
+class="level3">
+<h3>Decisões travadas na reconciliação (propagadas — ver índice para
+detalhe)</h3>
+<ol type="1">
+<li>Sobrenome do Léo: Macedo.</li>
+<li>Premissa do Ep. 1: recém-mudado para Copacabana (miolo do bairro,
+prédio antigo numa rua interna), novato no Colégio Santa Clara, vindo do
+Méier — classe média em equilíbrio, sem nenhuma carga de classe. O motor
+da temporada é a novidade social: ser o desconhecido entre trinta numa
+turma já formada.</li>
+<li>Memória-âncora do Mergulho: Léo aos 7 anos, o menino novo que travou
+(Ep. 7 — Os de Fora — desce a um arquivo distinto).</li>
+<li>Professora do Ep. 1: <strong>Solange</strong>, a professora que
+recebeu o novato, pegou a primeira aula, reparou nos desenhos dele e
+aposta nele.</li>
+<li>Contagem da T1: temporada serializada de dez episódios (ordem
+canônica em 05); os cinco episódios-âncora do canon original ocupam as
+posições 1, 3, 5, 7 e 10, intercalados com cinco cartas promovidas a
+elo. A poda da amizade de infância (“A Demolição”) virou a espinha
+serial da T1 (o Contador da estrada velha), deixando de ser episódio de
+catálogo avulso.</li>
+<li>Clímax de ansiedade: hiperventilação que desacelera. A respiração
+nunca para nem reinicia.</li>
+<li>Hemisférios: integração e sincronia (Corpo Caloso real), nunca a
+dicotomia “lógico vs. criativo”.</li>
+<li>Explicação sutil história-first: a tela pode usar falas-ponte curtas
+para costurar causalidade já dramatizada, mas nunca transformar ciência,
+pedagogia ou ferramenta em aula.</li>
+<li>Planejamento v6: Léo primeiro no pitch, T1 como temporada
+serializada de dez episódios com as cinco âncoras nas posições
+1/3/5/7/10, T8 como governabilidade parcial aos 19, e macroarco por
+motores humanos antes dos conceitos.</li>
+</ol>
+</section>
+</section>
+<section id="estado-atual-v7--cirurgia-dramática-pós-diagnóstico"
+class="level2">
+<h2>Estado Atual (v7 — Cirurgia Dramática pós-diagnóstico)</h2>
+<p>A v7 nasceu de um painel de diagnóstico independente com três lentes
+(comprador de conteúdo, script doctor, público-alvo), que leu o material
+do zero e convergiu num veredito: as rodadas anteriores haviam blindado
+os defeitos nas <em>rubricas</em> do piloto sem corrigi-los nas
+<em>cenas</em>. A v7 corrige nas cenas.</p>
+<section id="decisões-de-integração-da-v7" class="level3">
+<h3>Decisões de integração da v7</h3>
+<ol type="1">
+<li><strong>Faixa etária recalibrada de 8-13 para 10-13
+primário</strong> (alcance 8-13 em co-visionamento). As escolhas maduras
+— abertura contemplativa, anticlímax do “posso beber água?”, densidade
+de metáfora — deixam de ser defeito de retenção e viram o diferencial da
+série. Propagado em 06, 10, 12, README, Anexo C, Anexo D, Guia e
+17.</li>
+<li><strong>Piloto (doc 09) reescrito para v1.1</strong>, corrigindo os
+achados convergentes do painel:
+<ul>
+<li>Abertura fria dentro de Córtex City (Cena 0), com movimento e
+comédia, antes do cinza da cozinha — resolve a retenção dos primeiros
+90s.</li>
+<li>Comédia dos módulos cegos (Broca &amp; Wernicke na fábrica de
+palavras; Vigia no teaser) — cumpre a dramédia que a bíblia promete e o
+episódio não entregava.</li>
+<li>Mergulho com obstáculo e custo: o lockdown da Amy fecha rotas contra
+os heróis (Camada 3B); Spike arrisca a própria integridade e sai
+machucado — agência real da dupla na trama B.</li>
+<li>Astri falível: erra o diagnóstico no Cofre do Hipocampo e se corrige
+em cena — mata a “professora que conserta tudo”.</li>
+<li><strong>Causalidade do clímax invertida</strong>: a cidade só mantém
+a janela aberta; quem puxa a respiração é o Léo, por vontade própria
+(aperta a alça, respira, e SÓ ENTÃO a cidade amplifica). Cumpre a lei
+inegociável que a v1.0 afirmava na rubrica e violava na cena.</li>
+<li>Dúvida da Amy no 3º ato (Cena 10B): a mão que afrouxa mas não larga
+o quadro de rotas, plantando o pacto do Ep. 5.</li>
+<li>Beat do Davi no corredor: a primeira fresta do “Nós”
+verdadeiro.</li>
+</ul></li>
+<li><strong>Arco da T1 (doc 05)</strong>: o arco Amy↔︎Prefeito deixa de
+sumir dos episódios intermediários. Uma negociação de pacto fracassa em
+cena no Ep. 7 — Os de Fora (Névoa alta, Amy não consegue esperar),
+tornando o pacto do Ep. 10 — A Roda — uma segunda tentativa ganha, não
+um adjetivo. O fio do Pedro escala de omissão passiva para escolha ativa
+(Ep. 3 começa a responder e apaga; Ep. 5 mente pela primeira vez).</li>
+<li><strong>Irresistibilidade do arco (doc 05)</strong>: quatro adições
+estruturais para a série puxar como entretenimento, não só convencer
+como projeto:
+<ul>
+<li><strong>Variação do Mergulho</strong>: quatro modos (completo,
+parcial, para frente/preditivo, falso Mergulho cômico) para a assinatura
+nunca virar aula semanal previsível. O Mergulho de seis camadas fica
+reservado aos tentpoles (Eps. 1 e 5).</li>
+<li><strong>Motor cômico fiado na régua</strong>: a coluna “gag
+dominante” deixou de listar conceitos e passou a nomear set-pieces
+concretos do doc 14 (Broca/Wernicke no congelamento, a vistoria da
+estrada, a barra que nunca enche, o abraço alfandegário, T e o
+pódio).</li>
+<li><strong>Regra de elenco por episódio</strong>: núcleo permanente
+(Astri/Spike) + máx. 2 internos + máx. 3 humanos; Sera, T, Inês,
+Cerebelo e módulos como mundo visual sem subtrama na T1. Resolve
+densidade de elenco e custo.</li>
+<li><strong>Ordem canônica de 10 episódios</strong>: as 5 âncoras
+intercaladas com as 5 cartas mais fortes, cada uma promovida a elo que
+gira o Contador do Pedro e herda a Névoa no nível certo. Temporada
+totalmente serializada sem episódio opcional (13 = +3 cartas).</li>
+</ul></li>
+<li><strong>Posicionamento próprio diante do comparável óbvio (doc
+06)</strong>: o one-pager para de se defender do comparável e lidera
+pelo que ele é — uma série sobre as estradas que o cérebro constrói e
+deixa cair por desuso, não sobre emoções como personagens. A poda não é
+sentimento, é obra; é território próprio.</li>
+</ol>
+</section>
+<section
+id="novos-artefatos-de-prova-e-venda-da-v7-execução-por-agentes-revisados-e-reconciliados"
+class="level3">
+<h3>Novos artefatos de prova e venda da v7 (execução por agentes,
+revisados e reconciliados)</h3>
+<ul>
+<li><code>09_1_Roteiro_Piloto_22min.md</code> — o piloto no
+comprimento-alvo de produção (22 min), expandindo a prova curta
+(<code>09</code>) com os arcos de Solange, Davi e Pedro, mais comédia
+(Prefeito/slide, Fáceta, Falso Mergulho) e a trama B de Astri/Spike,
+preservando a causalidade sagrada do clímax. A curta permanece como
+prova de tom/animatic.</li>
+<li><code>18_Sizzle_e_Cenas_de_Audicao.md</code> — sizzle de ~90s + três
+cenas standalone (comédia “A Abelha”, emoção “A Estrada Velha”, dupla
+camada “O Funeral da Gliada”) para sala de pitch e audição de
+elenco.</li>
+<li><code>19_Identidade_de_Marca.md</code> — decisão de marca travada:
+título oficial <strong>“Córtex City: a Cidade que Esquece”</strong> (sem
+rename do canon interno), logline final, frase de diferenciação para
+reunião, plano-assinatura, taglines e voz de marca. Propagado a 01, 06,
+10 e ao deck.</li>
+<li><code>20_Pitch_Deck.md</code> — os 13 slides com copy pronto + brief
+de key art mirado (hero shot, lineup, o Mergulho, a estrada velha em
+demolição).</li>
+</ul>
+<p>Estado do pacote: o único gargalo restante do painel que não é
+decisão de negócio é a <strong>produção da key art</strong> — o brief já
+existe (doc 20) para mirá-la.</p>
+</section>
+<section
+id="achados-do-painel-ainda-em-aberto-não-resolvidos-nesta-rodada--exigem-decisão-do-criador-ou-trabalho-externo"
+class="level3">
+<h3>Achados do painel ainda em aberto (não resolvidos nesta rodada —
+exigem decisão do criador ou trabalho externo)</h3>
+<ul>
+<li><strong>Prova visual</strong>: sem key art, o one-pager é
+literatura. É o próximo passo mais urgente.</li>
+<li><strong>Governança</strong>: o veto científico “não negociável”
+combinado com autor passivo é lido pelo mercado como projeto
+indirigível. Sugestão do comprador: converter em consultoria com lista
+fechada de 5-8 linhas vermelhas.</li>
+<li><strong>Tese de franquia</strong>: protagonista que envelhece +
+serialização pesada é passivo de catálogo, não ativo. Reenquadrar T1-T2
+como núcleo e T3-T8 como apêndice de longevidade.</li>
+<li><strong>Densidade de elenco</strong>: ~25 personagens nomeados;
+falta uma regra de elenco por episódio e rebaixar parte do panteão a
+mundo visual sem fala na T1.</li>
+</ul>
+</section>
+</section>
+<section id="estado-atual-v8--base-científica-consolidada"
+class="level2">
+<h2>Estado Atual (v8 — Base Científica Consolidada)</h2>
+<p>A v8 promove o acervo em <code>pesquisa/</code> a base científica de
+bastidor e auditoria, sem transformar a bíblia em tratado nem reabrir a
+espinha dramática da T1. O documento-diretor é
+<code>pesquisa/Relatorio_Consolidado_Base_Cientifica_CortexCity.md</code>,
+que cruza Kandel, Poeppel, Gazzaniga, Bear, Sapolsky e Pinker com os
+seis pilares canônicos da série. O <code>pesquisa/AGENTS.md</code> vira
+guia de roteamento para pesquisa técnica, e
+<code>21_Checklist_Operacional_Sala_de_Roteiro.md</code> converte
+R1/R2/R3 em gate prático de cena.</p>
+<section id="decisões-de-integração-da-v8" class="level3">
+<h3>Decisões de integração da v8</h3>
+<ol type="1">
+<li>O canon vence na forma dramática; o relatório consolidado vence
+quando houver erro factual de mecanismo. Se uma cena é boa mas a
+biologia está errada, corrige-se a mecânica sem transformar a cena em
+aula.</li>
+<li>A linguagem pública e editorial evita moralizar entidades
+biológicas: Otto é fronteira do “Nós”, Cortisol é pressão de emergência
+prolongada, Amy é proteção mal calibrada, e a tela é fator de
+desregulação quando usada contra o relógio do sono.</li>
+<li>A base científica passa a ser multiobra: Kandel, Poeppel, Gazzaniga
+e Bear sustentam neurobiologia celular/sistêmica/cognitiva; Sapolsky e
+Pinker seguem como eixo narrativo-comportamental do Mergulho,
+causalidade e emoções como programas.</li>
+<li>Toda nova mecânica, roteiro, sizzle ou material de pitch passa pelo
+<code>21_Checklist_Operacional_Sala_de_Roteiro.md</code> antes de ser
+considerado reconciliado.</li>
+<li>O acervo de pesquisa é bastidor de precisão, não material de fala.
+R1 permanece absoluta: nenhum personagem verbaliza jargão científico em
+cena.</li>
+<li>A camada de memória passa a usar a direção preferencial “Sra. Hipo =
+bibliotecária de mapas vivos + guia do bonde noturno”: memória é caminho
+reconstruído por pistas e consolidado por replay/sono, não arquivo ou
+vídeo perfeito.</li>
+</ol>
+</section>
+</section>
+<section id="estado-atual-v9--auditoria-adversarial-total"
+class="level2">
+<h2>Estado Atual (v9 — Auditoria Adversarial Total)</h2>
+<p>A v9 submeteu todo o material a um painel de sete lentes
+independentes (script doctor, engenheiro de temporada, consultor
+científico, pedagogo, comprador de conteúdo, continuidade/canon,
+voz/comédia), com leitura do zero e verificação por refutação. O
+veredito completo está em <code>00_3_Veredito_v9.md</code>.</p>
+<section
+id="correções-aplicadas-na-v9-todas-em-cena-nenhuma-toca-decisão-travada"
+class="level3">
+<h3>Correções aplicadas na v9 (todas em cena, nenhuma toca decisão
+travada)</h3>
+<ol type="1">
+<li><strong>Névoa (doc 05):</strong> a tabela de dez episódios cravava
+“topo” no Ep. 9; corrigido para “quase no topo”, reservando o topo (que
+dispara a Virada do Capataz) ao finale Ep. 10.</li>
+<li><strong>Framework Pedagógico (doc 12):</strong> operava no modelo
+antigo de 5 episódios e arquivava “Quem É Você?” (Ep. 2) e “O Mapa Que
+Mudava” (Ep. 4) como catálogo futuro; realinhado ao canon de dez, com as
+cinco cartas reconhecidas.</li>
+<li><strong>BNCC (doc 12):</strong> o Ep. 5 (sono) estava mapeado ao
+EF06CI10 (que é substâncias psicoativas, não sono); reancorado na
+Competência Geral 8.</li>
+<li><strong>Clímax do piloto (doc 09_1):</strong> a metáfora “esse fole
+só abre” roçava a imagem de apneia proibida; reescrita para “achar o
+compasso / desacelerar”, preservando a causalidade sagrada (quem respira
+é o Léo).</li>
+<li><strong>Numeração pré-v6 (docs 09 e 09_1):</strong> rubricas e
+apêndices usavam a numeração de 5 âncoras; remapeadas para o canon de
+dez (A Estrada 2→3, O Sequestro 3→5, Os de Fora 4→7, A Roda 5→10).</li>
+<li><strong>Deck (doc 20):</strong> Slides 9 e 10 se contradiziam
+(serializada vs. episódica); harmonizados no modelo Gravity Falls /
+Hilda. Slide 2 teve a repetição trocada pelo diferencial da estrada
+velha.</li>
+<li><strong>Governança de venda (Guia):</strong> a copy chamava a
+consultoria de “ativa”, contradizendo o modelo passivo/estruturado;
+alinhada.</li>
+<li><strong>Serotonina (doc 05):</strong> “cidade lavada por serotonina”
+no triunfo, risco de neuromito; reescrito para distinguir pico da Dopa
+do contentamento da Sera.</li>
+</ol>
+</section>
+<section id="refutados-pela-fonte-a-v7-de-fato-corrigiu-nas-cenas"
+class="level3">
+<h3>Refutados pela fonte (a v7 de fato corrigiu nas cenas)</h3>
+<p>As três acusações de “promessa não cumprida na cena” — Mergulho
+didático, Astri não-falível, sizzle triunfante — foram refutadas linha a
+linha por céticos independentes. O material já estava correto.</p>
+</section>
+<section
+id="itens-de-decisão-do-criador--resolvidos-na-v91-aprovação-do-criador-em-02072026"
+class="level3">
+<h3>Itens de decisão do criador — resolvidos na v9.1 (aprovação do
+criador em 02/07/2026)</h3>
+<ol type="1">
+<li><strong>Arco Amy↔︎Prefeito no miolo:</strong> aprovado o beat mudo.
+As cartas 4 e 6 ganharam o runner “as janelas do Prefeito” (doc 05): no
+Ep.4, uma janela a mais acesa enquanto um plano dá certo sem alarme; no
+Ep.6, a derrota assistida para a máquina — que torna a recusa da Amy no
+Ep.7 mais barata de crer. Sem fala, sem asset novo.</li>
+<li><strong>Tese central vs. janela comercial:</strong> aprovada a prova
+parcial na T2. O “trem que responde” (doc 13, §8 T2) agora é
+explicitamente a primeira parcela da tese anti-homúnculo: Spike rastreia
+a resposta e encontra cem mãos, não um remetente — vivida e recusada por
+ele, mostrada ao público, nunca declarada. O “somos nós” pleno segue
+exclusivo da T6 (trava 4 atualizada). A bíblia (doc 06 §7) passou a
+vender esse seguro de janela.</li>
+<li><strong>Decisão de franquia — TRAVADA:</strong> o produto à venda é
+T1-T2; T3-T8 é fôlego de mundo, apresentado como apêndice/bônus e nunca
+como ativo garantido (já era o enquadramento do doc 06 §7 e do slide de
+visão de futuro; agora é doutrina, não inclinação).</li>
+<li><strong>Key art:</strong> continua sendo produção externa, mas o
+brief (doc 20, Entregável 2) ganhou a seção “Como encomendar” —
+prioridade, perfil de artista, entregáveis, critérios de aceite e
+processo em três portões. O gargalo deixou de ser de definição; é só de
+contratação.</li>
+</ol>
+</section>
+</section>
+<section id="estado-atual-v10--auditoria-lente-criança" class="level2">
+<h2>Estado Atual (v10 — Auditoria Lente-Criança)</h2>
+<p>A v10 fez o que nenhuma rodada anterior fez: leu o material com a
+lente do público, não de especialistas. Cinco personas de 10–13 anos
+(perfis de falha diversos: retenção, cheiro de lição, co-viewing, teto
+da faixa, régua Gravity Falls) leram a T1 inteira numa sala de leitura
+limpa de intenção de produção
+(<code>scripts/build_sala_leitura.py</code>), com motor de leitura em
+Gemini via <code>agy</code> e triagem dupla (régua de comparáveis +
+canon travado). Veredito completo em
+<code>00_4_Veredito_Lente_Crianca.md</code>.</p>
+<section id="resultado-da-v10" class="level3">
+<h3>Resultado da v10</h3>
+<ul>
+<li><strong>A série já puxa:</strong> 5/5 maratonariam, notas 7–8–8–8–8,
+nenhuma desistência; a causalidade sagrada do clímax foi percebida e
+elogiada pelo próprio público simulado.</li>
+<li><strong>4 achados reais de cena/texto</strong> (nenhum toca decisão
+travada): o custo da poda não é sentido nos Eps. 3–6; o Ep. 2 é o vale
+da temporada (puxão 6,6) na posição mais cara; moradores novos (Nora, T,
+Inês) entram sem apresentação; a superfície da falha do Léo repete
+(“mentiu de novo”) e o Otto lê como “palestrinha” no teto da faixa. Mais
+1 achado menor: reencuadrar “a mão não lembra” como hesitação (trava
+biológica).</li>
+<li><strong>Mantidos como assinatura:</strong> cenas humanas quietas
+(custo aceito da faixa 10–13), finale sem reencontro, nomes diegéticos
+de ciência.</li>
+<li><strong>Refutado como artefato:</strong> as confusões de jargão
+citavam prosa de beat que não vira tela.</li>
+<li><strong>v10.9 (interrogação de posicionamento — a série é para
+adultos?):</strong> a hipótese do criador (“talvez a série seja mais
+forte para adultos”) foi posta contra a parede com três leituras
+adversariais independentes (comprador de prestige animation adulto,
+executivo tween cético, agente de vendas frio — Codex/gpt-5.5) mais uma
+varredura de canon, cruzadas com o painel v10 e leitura direta do
+piloto. As três lentes convergiram sem combinar: <strong>a série é
+tween/família, e o adulto é teto real de co-viewing, não público
+primário.</strong> O que lê como “adulto” no material — anticlímax,
+serialização, recusa de reset, a pergunta da responsabilidade — é
+exatamente o que distingue as melhores séries da prateleira 10–13
+(Bluey, Hilda, Avatar, Gravity Falls), não vocação de prestige:
+adultizar exigiria demolir o que a série tem de mais vendável (a
+pedagogia invisível, a comédia que protege a criança, a gramática de
+brinquedo dos Ofícios, escolas e licenciamento) para competir numa
+prateleira mais estreita sem ter nascido adulta. Formulação travada do
+posicionamento: <strong>núcleo tween 10–13; alcance 8–13 apenas em
+co-viewing, nunca como faixa direta; co-espectador adulto como teto
+conquistado — a série é calibrada para 10+ e aceita perder a borda de
+8–9 sozinha.</strong> Correções de deriva aplicadas na mesma rodada: o
+“para crianças e adultos” deste doc virou a formulação travada; o
+“infantil/infantojuvenil” do veredito executivo do doc 17 virou
+“tween/família (10–13 primário)” — “infantil” sem qualificador empurra o
+comprador para a prateleira pré-escolar; os dois “alcance 8-13” soltos
+do doc 17 ganharam “em co-viewing”; o “+ adultos” do Anexo C virou “+
+co-espectador adulto”; a linha de PR do doc 12 trocou “série infantil”
+por “série infantojuvenil”. Nenhuma mudança em cena, tom ou canon
+criativo — o material já era a resposta; faltava a copy parar de
+hesitar.</li>
+<li><strong>v10.8 (sincronização dos docs derivados):</strong> três
+auditores Gemini/agy varreram sete documentos contra o estado v10–v10.7;
+achados triangulados citação a citação e aplicados pela caneta do
+agente-pai. Atualizados: 06/20/Guia (dois roteiros plenos como
+entregável, Cena 0B na descrição do Ep. 1, doc 18 na tabela do Guia,
+ponteiro para 03_1), 08 (exceção de brasilidade apontando o doc 10; nota
+de precedência 08↔︎03_1), 13 (linha do Ep. 9 na tabela de Névoa — resto
+da v9; botão em dois tempos apontando 05_1; chave “recebido, Lambari” na
+T2), 00_1 (03_1 e vereditos no índice; decisões travadas 18–20) e README
+(mapa completo de camadas; nota que desfaz a confusão dos números
+18/19). <strong>Rejeições da revisão:</strong> o auditor propôs terminar
+o Ep. 10 com a resposta “recebido, Lambari” (quebraria o fecho mudo
+sagrado — a chave é da T2) e vender o painel v10 como “teste com
+crianças” (o painel é simulado; virou nota explícita de uso interno nos
+vereditos para nunca contaminar material de venda).</li>
+<li><strong>v10.7 (dossiês, leva 2 — Léo e Pedro):</strong> o
+protagonista ganhou a metade que o painel não via (o ritual do traço com
+o 2B emprestado do Pedro — a rima com o 9B da Marta: a mão do Léo segura
+as duas amizades em grafite; o talismã da ponte sem fim que a Ponte
+Trançada paga; o humor de canto como termômetro de segurança) e a
+taxonomia das dez falhas com motor e superfície distintos por episódio
+(a régua anti-“mentiu de novo”, fechando o achado 4). O duelo de teses
+do Pedro (inocência × consciência) terminou em fusão temporal: ele não
+percebeu (Eps. 1–5, casa cheia que normaliza vácuo — áudios genuinamente
+leves), percebeu entre o 5 e o 7 (a mentira escrita + o padrão do irmão
+Thiago, que escondeu o Méier num colégio da Zona Sul e viu a máscara
+ruir), e escolheu não cobrar (a foto sem juros, o digitando-limite, o
+silêncio-fronteira, o meio-sorriso-recibo) — o arco inteiro fora da
+tela, presente de segunda maratona. Uma cirurgia só (Ep. 8: o pulso que
+morre na Ponte, 2 linhas). Recusas registradas no 03_1; a chave do
+reencontro da T2 fica plantada (“recebido, Lambari”).</li>
+<li><strong>v10.6 (teste de riso do piloto):</strong> a pendência mais
+antiga do plano de episódios, paga com três lentes (Cauã, Marina, PH+Gui
+de 8 anos). Resultado: o repertório-assinatura confirma força (“pastel
+de feira” fez o Gui pular do sofá inventando música; a abelha de terça é
+o topo do gamer; a fábrica de palavras rendeu nas três lentes), o
+deserto de riso do Mergulho é design validado (“botar piada ali
+estragaria”), e a divergência entre lentes provou a piada de duas
+cabeças operando (o topo de uma é o “adulto” da outra). Duas cirurgias
+nos dois pilotos, ambas em beats sinceros que liam como sermão: os dois
+potes da Toninha viraram gesto mudo (a explicação “um é de quem precisar
+de amigo” saiu — a casa prefere perder a frase a ganhar o sermão), e a
+reparação da Solange trocou a confissão terapêutica pela auto-zoação
+concreta (o nome errado no quadro, com foto no mural dos professores) e
+perdeu o fecho de contrato (“Combinado?”). Mantidos com registro: a
+zoação do Ruan (3/3 “pior piada” — mas com a reação pretendida: raiva,
+não riso; é crueldade diegética funcionando) e os slides do Prefeito
+(camada verbal adulta, mas o físico segura a criança — nota de direção,
+não corte).</li>
+<li><strong>v10.5 (roteiro pleno do Ep. 2):</strong> “Quem É Você?”
+encenado em 22 min (<code>09_2_1_Roteiro_Ep02_22min.md</code>) — o
+segundo roteiro completo do pacote, prova de que a temporada sustenta o
+nível do piloto numa carta comum. Encena o que os beats não pagavam: a
+guerra de holofotes com prazo carimbado e custo físico por rodada, a
+exportação do empate (causalidade sagrada preservada em rubrica
+auditável), o Beco da Prosa como piso emocional, o apelido do Pedro
+nomeado (Lambari de Asfalto) e a última imagem encadeada ao Ep. 3.
+Validação parcial (persona Cauã, borda inferior): leu o roteiro real, 2
+risos declarados, coração no ato indefensável, gancho dos Coveiros
+funcionando (“quero ver se vão finalmente fazer alguma coisa”) — e dois
+defeitos de encenação que ele pegou foram corrigidos no ato (o pagamento
+do 4º alarme do Vigia saiu de nota de produção e virou cena; o runner da
+Astri perdeu o staccato de professora). “Pior que o piloto” para o gamer
+é custo previsto da partitura piano. Validação da Bia (teto da faixa):
+<strong>“melhor que o episódio 1”</strong>, puxão 8/10, momento celular
+“não peguei” (na linha de base ela pegava), coração na sequência
+mentira→áudio→silêncio (“doeu de ler”); a comédia de repartição flopa
+para a persona dela por perfil, com exceção do deboche da Fáceta (meio
+sorriso nas duas pontas). As duas pontas seguram o episódio por
+mecanismos opostos — cidade/comédia embaixo, drama/vergonha em cima —
+que é o design de dupla camada funcionando. Nota de método: o sandbox do
+agy não confina leitura (a Bia vazou para os beats em ambas as rodadas);
+testes cegos futuros devem considerar cópia isolada com instrução dura,
+e ainda assim triangular citações.</li>
+<li><strong>v10.4 (dossiês de personagens, leva 1):</strong> Astri, Amy,
+Davi e Theo ganharam dossiês profundos em
+<code>03_1_Dossies_Personagens.md</code> (painel de dramaturgos
+Gemini/agy com duas teses rivais para a Amy; arbitragem, cortes e caneta
+final do agente-pai; brutos em <code>archive/</code>). A Amy foi o
+caso-chave: fusão comédia-de-competência + tragédia-de-quem-nunca-dorme
+— a parede de alarmes de bronze, o retrato do Léo aos 7 e a pasta “PERDA
+DO PEDRO” entram mudos nos Eps. 5 e 7 para converter o espectador que a
+achava “a mais chata”. Subtramas de baixa dose aplicadas nos beats: as
+caixas do corredor e a roda do skate (Davi), as aves do pátio, a escada
+dos tás e o lápis da Marta (Theo), a ordem de inspeção da cerca (Astri).
+Recusas registradas no próprio 03_1 (vizinhança do poço, Protocolo do
+Espirro, fita PERIGO no Ep.4, racionamento das caldeiras, toques no
+piloto).</li>
+<li><strong>v10.3 (Cena 0B — “de costas pro mar”):</strong> ideia do
+criador avaliada contra o canon e aprovada em forma sintetizada. O
+piloto ganhou, entre a Cena 0 e a Cena 1, um voo de ~10s sobre os
+cartões-postais do Rio <strong>adormecidos</strong> na madrugada — e a
+câmera vira as costas pro mar, mergulhando na rua interna até a única
+janela acesa (ponte sonora: a chaleira). O postal aparece uma vez,
+inteiro, para ser abandonado: declaração de território e setup mudo da
+mentira da praia do Ep.2. Exceção registrada no doc 10 (§ Brasilidade);
+o sizzle (doc 18) ganhou o mesmo voo comprimido no plano [00:12-00:16].
+A forma literal da ideia (postais celebrados) foi recusada por colidir
+com a doutrina anti-cartão-postal e com a tese da série.</li>
+<li><strong>v10.2 (ganchos seriais):</strong> o primeiro terço ganhou a
+gramática do gancho (<code>05_1</code>, seção “A gramática do gancho
+serial”): botão em dois tempos (cicatriz → pergunta concreta com
+endereço), última imagem muda que a abertura fria seguinte paga (Ep.2→3:
+ronda dos Coveiros na boca da estrada velha; Ep.3→4: o bonde que não
+para; Ep.4→5: o celular-sol fora de hora), abertura do Ep.3 reescrita (a
+Dopa da inauguração prematura, sem barraca de apostas) e a promessa do
+rabisco do Ep.2 paga pelo Davi no Ep.6. Revalidação (Sofia, régua
+Gravity Falls): Ep.3 subiu de 7 para 9, Ep.6 chegou a 10, e o motivo
+declarado do puxão passou a ser a própria contagem regressiva da
+poda.</li>
+<li><strong>v10.1 (cirurgia aplicada):</strong> os achados 1–3 e 5, mais
+o gume do Otto, foram operados nos beat sheets (Eps. 2, 3, 4, 5, 6, 7, 9
+e 10) — escada de custo da poda legível, cronômetro e exportação do
+empate no Ep. 2, plantios mudos de Nora/Inês/T, mão que hesita em vez de
+esquecer. Detalhe no adendo v10.1 do veredito. Pendente para os roteiros
+plenos: variar a superfície da falha do Léo (achado 4) e manter a
+disciplina prosa-vira-imagem que o piloto já demonstrou.</li>
+</ul>
+</section>
+</section>
+<section id="próximos-passos-sugeridos" class="level2">
+<h2>Próximos Passos (sugeridos)</h2>
+<ol start="0" type="1">
+<li><strong>Continuar o plano de episódios</strong>
+(<code>docs/superpowers/specs/2026-07-02-plano-episodios-incriveis.md</code>):
+a Frente 0 já ganhou documento próprio
+(<code>05_1_Motor_da_Temporada_T1.md</code>) e foi propagada aos docs
+centrais. O próximo passo criativo é escrever beat sheets dos Eps. 2–10
+(começando pelo 10 e pelo 2), com a passada de id tween na tabela do doc
+05, o brief da música do Léo e o teste de riso do piloto como frentes
+seguintes.</li>
+<li>Contratar a key art usando o pacote pronto (doc 20, Entregável 2 +
+seção “Como encomendar” + doc 10). <strong>É o gargalo nº 1 apontado
+pelo painel de compra — e agora é só contratação, não
+definição.</strong></li>
+<li>Gerar uma versão PDF limpa da bíblia integrada apenas a partir do
+<code>06_Pitch_Bible_Final.md</code>.</li>
+<li>Preparar teaser/sizzle ou cena-piloto curta para demonstrar tom,
+estilo e Mergulho.</li>
+<li>Usar o <code>17_Plano_de_Negocios_Workflow.md</code> como guia único
+antes de qualquer conversa com produtora.</li>
+</ol>
+</section>
+</section>
+<p class="source-note">Documento convertido automaticamente a partir do Markdown do repositório local. Para voltar à visão executiva, use o link no topo.</p>
+</main>
+</div>
+</body>
+</html>
