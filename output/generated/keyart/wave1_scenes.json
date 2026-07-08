@@ -1,0 +1,45 @@
+{
+  "scenes": [
+    {
+      "name": "reveal_9x16",
+      "aspect_ratio": "9:16",
+      "scene": "An extreme vertical perspective plunging down through the stacked strata of a colossal internal metropolis. At the highest stratum, teeming organic causeways and illuminated overpasses weave above a vast, open plaza paved with subtle grid-line notebook paper texture. Towering over the upper district is the Prefrontal Hall, a monumental skyscraper wrapped in active construction scaffolding, cranes, and timber barriers, its uppermost floors still lacking windows as workers build toward the sky. Below this bustling civic level, structural columns and highways plunge dizzyingly downward into an immense, dark-blue abyss where deeper neighborhoods glimmer in layered tiers. Bright cyan electrical traffic streaks along vertical transport tubes, casting cool reflections across angular architectural canyons, creating an overwhelming sense of scale, depth, and vertical vertigo."
+    },
+    {
+      "name": "layer1_amigdala",
+      "aspect_ratio": "16:9",
+      "scene": "A wide shot of an ancient stone fortress quarter designed like a veteran fire command citadel, vibrating with urgent, exhausted vigilance. Intensely bright present-day colors illuminate the architecture as sweeping warning-beacon red lights surge upward from heavy floor grates and revolving rooftop alarm lanterns. Along the surrounding thoroughfares, automated traffic barriers swing shut and street signals flash, dynamically shifting lane priorities to clear paths for emergency dispatch. The weathered stonework and watchtowers show the heavy wear of sleepless decades of protection rather than any sinister menace. Beams of crimson lighthouse glare cut through the crisp air, casting sharp shadows across control gantries and reinforced walls, capturing the tense atmosphere of an alert fortress one second before a major alarm."
+    },
+    {
+      "name": "layer2_talamo",
+      "aspect_ratio": "16:9",
+      "scene": "Inside a monumental Grand Central sensory relay station built with soaring organic art déco arches and sweeping vaulted ceilings. Torrential streams of vivid cyan impulse signals pour inward through massive external intake tunnels, fanning out in glowing ribbons across vast, polished myelin railway platforms. The bustling concourse is strictly organized into distinct color-coded boarding zones: cool sapphire illumination bathes the vision express platforms, warm crimson glow defines the auditory transit concourse, and vibrant emerald light marks the tactile arrival bays. Automated turnstiles and switching tracks sort the ceaseless flow of incoming sensory trains into their designated neural routes. The atmosphere is grand and resonant, filled with the energetic hum of high-volume sorting within a slightly deeper, more historic stratum of the city."
+    },
+    {
+      "name": "layer4_rodovias_mielina",
+      "aspect_ratio": "16:9",
+      "scene": "A sweeping elevated perspective of a colossal, bone-white superhighway soaring gracefully above the shadowy, older strata of the deep city. Constructed from thick, seamlessly layered insulation, the reinforced tubular roadway represents a well-learned skill, gleaming with the solid, polished sheen of repeated practice. Streams of brilliant cyan impulse traffic race along the frictionless curves at breathtaking speed, leaving vibrant trails of light that illuminate the smooth architectural contours. Below the elevated overpass, dimly lit historic avenues and unpaved secondary lanes recede into deep atmospheric shadow, emphasizing the structural dominance and high-velocity efficiency of this perfected route. The scene exudes structural strength, mastery, and the exhilarating flow of a deeply ingrained habit operating at peak performance."
+    },
+    {
+      "name": "layer5_cofres_hipocampo",
+      "aspect_ratio": "16:9",
+      "scene": "Deep within the city's historic core, a vast labyrinth of towering library shelves and archival vaults expands into hushed, nostalgic twilight. Noticeably dimmer than the bustling upper districts, the chamber is bathed in a warm, gentle sepia glow emanating from living memory strata. Open archive drawers pull out to reveal intricate, three-dimensional miniature city maps and grid-paper street models that softly shimmer with preserved moments of childhood. Narrow tram tracks wind gracefully between ancient wooden reading tables and towering catalog cabinets, where tiny brass lamps cast cozy pools of amber light. The atmosphere is quiet, reverent, and deeply comforting—a living, breathing repository where early experiences are carefully cataloged and kept alive in gentle shadow."
+    },
+    {
+      "name": "layer6_catacumbas",
+      "aspect_ratio": "16:9",
+      "scene": "At the absolute bottom of the descent lies the deepest and darkest foundation of the metropolis, shrouded in primal silence and near-monochromatic gloom. Here, ancient ruined organic architecture stands at the very edge of abstraction, with massive skeletal arches and weathered, fossilized pillars emerging from profound shadow. The environment is stripped of all modern metropolitan color, illuminated only by the flickering, warm embers of scattered primitive torches planted along fragmented stone pathways. The architectural remains suggest ancestral structures and ancient survival circuits, deliberately incomplete and mysterious, eroding into cavernous darkness. Heavy shadows swallow the cavern walls, creating an atmosphere of immense evolutionary age, quiet reverence, and raw, foundational stillness beneath the modern city."
+    },
+    {
+      "name": "mergulho_keyframe",
+      "aspect_ratio": "16:9",
+      "scene": "A dramatic single-frame collision of two distinct worlds during a high-speed vertical transition. In the upper half of the composition, an ordinary human classroom corridor is completely frozen in time and drained to desaturated near-black-and-white, except for a single, intensely glowing smartphone screen held in a frozen hand. The camera plunges directly into and through this glowing colored trigger, shattering the boundary of the skull in a continuous, breathless dive. Emerging beneath the threshold is the vibrant, deep-blue and bioluminescent expanse of Córtex City, pulsing with sharp geometric lines and neon highways. At the exact boundary where the desaturated human register dissolves into the luminous inner metropolis, the agile silhouette of a courier figure with glowing cyan impulse anatomy leaps downward into the abyss."
+    },
+    {
+      "name": "mundo_de_fora",
+      "aspect_ratio": "16:9",
+      "scene": "A serene, wide-angle interior shot of a grounded Brazilian tween's lived-in bedroom, rendered in a warm, tactile 2D storybook animation style with thick, expressive line art and a washed, earthy color palette of terracotta, muted mustard, and soft cream. The camera remains completely static and patient, capturing an atmosphere of authentic domestic quietude. Natural, ordinary Brazilian morning sunlight streams through a simple open window, gently illuminating a wooden desk littered with school textbooks, colored pencils, and an open grid-paper notebook filled with hand-drawn city sketches. A well-worn, slightly scuffed backpack rests casually on the floor beside a rumpled bed. The scene is entirely human, peaceful, and grounded in everyday reality, featuring zero bioluminescence, no sci-fi architecture, and no glowing effects—establishing the calm, relatable human baseline of real life.",
+      "standalone": true
+    }
+  ]
+}
